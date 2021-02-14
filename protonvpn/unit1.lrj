@@ -1,0 +1,6 @@
+{"version":1,"strings":[
+{"hash":216509177,"name":"tmainform.caption","sourcebytes":[80,114,111,116,111,110,86,80,78,45,71,85,73],"value":"ProtonVPN-GUI"},
+{"hash":116154878,"name":"tmainform.downloadbtn.caption","sourcebytes":[67,111,110,102,105,103,117,114,97,116,105,111,110],"value":"Configuration"},
+{"hash":189456468,"name":"tmainform.autostartcheckbox.caption","sourcebytes":[65,117,116,111,83,116,97,114,116],"value":"AutoStart"},
+{"hash":371552,"name":"tmainform.button1.caption","sourcebytes":[83,116,111,112],"value":"Stop"}
+]}

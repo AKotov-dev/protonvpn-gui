@@ -1,0 +1,85 @@
+[NAME]
+name=protonvpn
+
+[VERSION]
+version=0.3
+
+[RELEASE]
+release=0.mrx8
+
+[GROUP]
+group=Applications/Internet
+
+[DESCRIPTION]
+0=Proton VPN Connector
+1=...
+2=More information: /usr/share/doc/package_name/repack.txt
+
+[MAINTAINER]
+maintainer=Alex Kotov
+
+[VENDOR]
+vendor=alex_q_2000 (C) 2021
+
+[SUMMARY]
+summary=Proton VPN Connector
+
+[URLCOPY]
+urlcopy=https://cloud.mail.ru/public/L2K3/HRTMjbSCH
+
+[LICENSE]
+license=GPLv3+
+
+[DEPS]
+deps=openvpn systemd polkit unzip
+
+[META]
+meta=0
+
+[NOARCH]
+noarch=0
+
+[SIGN]
+sign=0
+
+[FILES]
+0=/etc/protonvpn/update-resolv-conf
+1=/usr/bin/protonvpn
+2=/usr/share/protonvpn/
+3=/usr/share/applications/protonvpn.desktop
+4=/usr/share/icons/protonvpn.png
+5=/usr/share/polkit-1/actions/protonvpn.policy
+6=/usr/share/doc/protonvpn/
+
+[URL32]
+url32=https://cloud.mail.ru/public/L2K3/HRTMjbSCH
+
+[URL64]
+url64=https://cloud.mail.ru/public/L2K3/HRTMjbSCH
+
+[PROGRAMNAME]
+programname=Proton VPN Connector
+
+[DEVTOOL]
+devtool=Lazarus
+
+[TOOLVERSION]
+toolversion=2.0.10
+
+[INFO]
+0=Proton VPN Connector for FREE configurations
+1=---
+2=/etc/protonvpn - рабочая папка
+3=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
+4=/etc/protonvpn/protonvpn.pass - файл с паролями
+5=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
+6=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
+7=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
+8=/usr/bin/protonvpn - пускач через pkexec
+9=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
+10=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
+11=/usr/share/protonvpn - GUI (Lazarus source + bin)
+12=/usr/share/icons/protonvpn.png - иконка в основном меню
+13=/usr/share/doc/protonvpn/repack.txt - инфо
+14=/run/openvpn/protonvpn.pid - индикатор процесса
+15=/var/log/protonvpn.log - лог подключения

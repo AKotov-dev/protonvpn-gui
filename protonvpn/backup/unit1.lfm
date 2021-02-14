@@ -1,0 +1,88 @@
+object MainForm: TMainForm
+  Left = 289
+  Height = 642
+  Top = 128
+  Width = 904
+  ActiveControl = DownloadBtn
+  Caption = 'ProtonVPN-GUI'
+  ClientHeight = 642
+  ClientWidth = 904
+  OnCreate = FormCreate
+  OnShow = FormShow
+  Position = poDefault
+  SessionProperties = 'Left;Top;Width;Height'
+  LCLVersion = '2.0.10.0'
+  object Memo1: TMemo
+    Left = 0
+    Height = 594
+    Top = 48
+    Width = 904
+    Align = alBottom
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Font.Height = -12
+    Font.Name = 'Sans'
+    Lines.Strings = (
+      'Рrepare...'
+    )
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssVertical
+    TabOrder = 2
+  end
+  object DownloadBtn: TButton
+    Left = 8
+    Height = 30
+    Top = 8
+    Width = 120
+    Caption = 'Configuration'
+    OnClick = DownloadBtnClick
+    TabOrder = 0
+  end
+  object AutoStartCheckBox: TCheckBox
+    AnchorSideTop.Control = Button1
+    AnchorSideTop.Side = asrCenter
+    AnchorSideRight.Control = Button1
+    Left = 724
+    Height = 32
+    Top = 7
+    Width = 91
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 5
+    Caption = 'AutoStart'
+    OnChange = AutoStartCheckBoxChange
+    TabOrder = 1
+  end
+  object Shape1: TShape
+    AnchorSideLeft.Control = DownloadBtn
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = DownloadBtn
+    AnchorSideTop.Side = asrCenter
+    Left = 138
+    Height = 17
+    Top = 15
+    Width = 15
+    BorderSpacing.Left = 10
+    Brush.Color = clYellow
+    Shape = stCircle
+  end
+  object Button1: TButton
+    Left = 820
+    Height = 30
+    Top = 8
+    Width = 75
+    Anchors = [akTop, akRight]
+    Caption = 'Stop'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 832
+    Top = 64
+  end
+  object XMLPropStorage1: TXMLPropStorage
+    StoredValues = <>
+    Left = 744
+    Top = 64
+  end
+end

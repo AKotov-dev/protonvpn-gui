@@ -1,0 +1,15 @@
+[Unit]
+Description=Proton VPN Tunneling Application
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+PrivateTmp=true
+Type=forking
+PIDFile=/run/openvpn/protonvpn.pid
+ExecStart=/usr/sbin/openvpn --daemon --writepid /run/openvpn/protonvpn.pid \
+ --cd /etc/openvpn/ --config us-free-03.protonvpn.com.udp.ovpn --log /var/log/protonvpn.log \
+ --auth-user-pass /etc/openvpn/protonvpn.pass
+
+[Install]
+WantedBy=multi-user.target

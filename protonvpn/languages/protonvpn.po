@@ -1,0 +1,71 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: ProtonVPN\n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#: configunit.sdeleterecords
+msgctxt "configunit.sdeleterecords"
+msgid "Delete selected entries other than the active one?"
+msgstr ""
+
+#: tconfigform.button1.caption
+msgid "Load"
+msgstr ""
+
+#: tconfigform.button1.hint
+msgid "Load ProtonVPN_server_configs.zip"
+msgstr ""
+
+#: tconfigform.button2.caption
+msgctxt "tconfigform.button2.caption"
+msgid "Restart"
+msgstr ""
+
+#: tconfigform.caption
+msgctxt "tconfigform.caption"
+msgid "Configuration"
+msgstr ""
+
+#: tconfigform.checkbox1.caption
+msgid "+ resolvconf"
+msgstr ""
+
+#: tconfigform.checkbox1.hint
+msgid "Use DNS from VPN"
+msgstr ""
+
+#: tconfigform.label1.caption
+msgid "Login:"
+msgstr ""
+
+#: tconfigform.label2.caption
+msgid "Password:"
+msgstr ""
+
+#: tmainform.autostartcheckbox.caption
+msgid "AutoStart"
+msgstr ""
+
+#: tmainform.button1.caption
+msgctxt "tmainform.button1.caption"
+msgid "Stop"
+msgstr ""
+
+#: tmainform.caption
+msgid "ProtonVPN-GUI"
+msgstr ""
+
+#: tmainform.downloadbtn.caption
+msgctxt "tmainform.downloadbtn.caption"
+msgid "Configuration"
+msgstr ""
+
