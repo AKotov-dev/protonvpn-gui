@@ -2,6 +2,6 @@
 
 Dependencies: openvpn
 
-Download *.zip archive with configuration files .ovpn from your personal account, upload to the client and connect. It's simple...
+Download *.zip archive with configuration files .ovpn from your personal account, upload to the client and connect.
 
 Made and tested in Mageia Linux-8.
