@@ -1,6 +1,6 @@
 **protonvpn** - GUI client for ProtonVPN
 
-Dependencies: openvpn unzip
+Dependencies: openvpn unzip systemd
 
 Download *.zip archive with configuration files .ovpn from your personal account, upload to the client and connect.
 
