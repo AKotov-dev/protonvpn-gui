@@ -1,4 +1,4 @@
-**ProtonVPN-GUI** - GUI client for ProtonVPN
+**ProtonVPN-GUI** - client for ProtonVPN
 
 Dependencies: openvpn unzip systemd
 
