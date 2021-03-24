@@ -1,12 +1,12 @@
 object ConfigForm: TConfigForm
-  Left = 305
-  Height = 484
-  Top = 125
-  Width = 458
+  Left = 455
+  Height = 490
+  Top = 167
+  Width = 454
   ActiveControl = FileListBox1
   Caption = 'Configuration'
-  ClientHeight = 484
-  ClientWidth = 458
+  ClientHeight = 490
+  ClientWidth = 454
   FormStyle = fsStayOnTop
   OnCreate = FormCreate
   OnShow = FormShow
@@ -15,9 +15,9 @@ object ConfigForm: TConfigForm
   LCLVersion = '2.0.10.0'
   object FileListBox1: TFileListBox
     Left = 8
-    Height = 380
-    Top = 96
-    Width = 309
+    Height = 391
+    Top = 88
+    Width = 305
     Anchors = [akTop, akLeft, akRight, akBottom]
     Directory = '/etc/protonvpn'
     ItemHeight = 25
@@ -43,7 +43,7 @@ object ConfigForm: TConfigForm
     AnchorSideTop.Side = asrCenter
     Left = 8
     Height = 15
-    Top = 59
+    Top = 54
     Width = 61
     BorderSpacing.Right = 4
     Caption = 'Password:'
@@ -55,7 +55,7 @@ object ConfigForm: TConfigForm
     Left = 50
     Height = 36
     Top = 8
-    Width = 403
+    Width = 399
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     TabOrder = 1
@@ -65,8 +65,8 @@ object ConfigForm: TConfigForm
     AnchorSideLeft.Side = asrBottom
     Left = 74
     Height = 36
-    Top = 48
-    Width = 379
+    Top = 43
+    Width = 375
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
     EchoMode = emPassword
@@ -77,10 +77,10 @@ object ConfigForm: TConfigForm
     AnchorSideLeft.Control = FileListBox1
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = FileListBox1
-    Left = 325
+    Left = 321
     Height = 30
     Hint = 'Load ProtonVPN_server_configs.zip'
-    Top = 96
+    Top = 88
     Width = 128
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
@@ -93,9 +93,9 @@ object ConfigForm: TConfigForm
   object Button2: TButton
     AnchorSideLeft.Control = FileListBox1
     AnchorSideLeft.Side = asrBottom
-    Left = 325
+    Left = 321
     Height = 30
-    Top = 446
+    Top = 449
     Width = 128
     Anchors = [akLeft, akRight, akBottom]
     BorderSpacing.Left = 8
@@ -106,9 +106,9 @@ object ConfigForm: TConfigForm
   object Image1: TImage
     AnchorSideLeft.Control = FileListBox1
     AnchorSideLeft.Side = asrBottom
-    Left = 325
+    Left = 321
     Height = 128
-    Top = 176
+    Top = 168
     Width = 128
     Anchors = [akTop, akLeft, akRight]
     AutoSize = True
@@ -442,10 +442,10 @@ object ConfigForm: TConfigForm
   object CheckBox1: TCheckBox
     AnchorSideLeft.Control = FileListBox1
     AnchorSideLeft.Side = asrBottom
-    Left = 325
+    Left = 321
     Height = 32
     Hint = 'Use DNS from VPN'
-    Top = 136
+    Top = 128
     Width = 108
     BorderSpacing.Left = 8
     Caption = '+ resolvconf'
@@ -461,14 +461,14 @@ object ConfigForm: TConfigForm
       end>
     OnSavingProperties = XMLPropStorage1SavingProperties
     OnRestoringProperties = XMLPropStorage1RestoringProperties
-    Left = 192
-    Top = 184
+    Left = 368
+    Top = 384
   end
   object OpenDialog1: TOpenDialog
     FileName = '~/'
     Filter = 'ProtonVPN configs (*.zip)|*.zip'
     InitialDir = '~/'
-    Left = 192
-    Top = 112
+    Left = 368
+    Top = 312
   end
 end

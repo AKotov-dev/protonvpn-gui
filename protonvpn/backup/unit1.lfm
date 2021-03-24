@@ -1,12 +1,12 @@
 object MainForm: TMainForm
-  Left = 289
-  Height = 642
-  Top = 128
-  Width = 904
+  Left = 305
+  Height = 649
+  Top = 127
+  Width = 907
   ActiveControl = DownloadBtn
   Caption = 'ProtonVPN-GUI'
-  ClientHeight = 642
-  ClientWidth = 904
+  ClientHeight = 649
+  ClientWidth = 907
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poDefault
@@ -14,9 +14,9 @@ object MainForm: TMainForm
   LCLVersion = '2.0.10.0'
   object Memo1: TMemo
     Left = 0
-    Height = 594
+    Height = 581
     Top = 48
-    Width = 904
+    Width = 907
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     Font.Height = -12
@@ -42,7 +42,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = Button1
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = Button1
-    Left = 724
+    Left = 727
     Height = 32
     Top = 7
     Width = 91
@@ -60,13 +60,13 @@ object MainForm: TMainForm
     Left = 138
     Height = 17
     Top = 15
-    Width = 15
+    Width = 12
     BorderSpacing.Left = 10
     Brush.Color = clYellow
     Shape = stCircle
   end
   object Button1: TButton
-    Left = 820
+    Left = 823
     Height = 30
     Top = 8
     Width = 75
@@ -74,6 +74,20 @@ object MainForm: TMainForm
     Caption = 'Stop'
     OnClick = Button1Click
     TabOrder = 3
+  end
+  object StaticText1: TStaticText
+    Left = 0
+    Height = 20
+    Top = 629
+    Width = 907
+    Align = alBottom
+    BorderStyle = sbsSingle
+    Caption = 'Author: alex_q_2000 (C) 2021  License: GPLv3'
+    Font.Color = clGray
+    Font.Height = -11
+    Font.Name = 'Sans'
+    ParentFont = False
+    TabOrder = 4
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

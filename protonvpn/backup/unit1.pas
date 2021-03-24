@@ -18,6 +18,7 @@ type
     Shape1: TShape;
     DownloadBtn: TButton;
     Memo1: TMemo;
+    StaticText1: TStaticText;
     Timer1: TTimer;
     XMLPropStorage1: TXMLPropStorage;
     procedure AutoStartCheckBoxChange(Sender: TObject);

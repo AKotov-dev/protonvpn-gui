@@ -48,8 +48,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <TopLine Value="115"/>
-        <CursorPos X="28" Y="139"/>
+        <TopLine Value="114"/>
+        <CursorPos X="28" Y="140"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -71,7 +71,7 @@
         <ResourceBaseClass Value="Form"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="137"/>
+        <TopLine Value="125"/>
         <CursorPos X="36" Y="157"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>

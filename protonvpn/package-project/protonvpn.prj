@@ -2,7 +2,7 @@
 name=protonvpn
 
 [VERSION]
-version=0.3
+version=0.4
 
 [RELEASE]
 release=0.mrx8
@@ -41,6 +41,9 @@ noarch=0
 
 [SIGN]
 sign=0
+
+[DEB]
+deb=0
 
 [FILES]
 0=/etc/protonvpn/update-resolv-conf
