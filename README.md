@@ -7,3 +7,5 @@ Download `*.zip` archive with configuration files `*.ovpn` from your personal ac
 Made and tested in Mageia Linux-8.
 
 ![](https://github.com/AKotov-dev/protonvpn-gui/blob/main/ScreenShots/ProtonVPN-GUI-1-1.png)
+
+![](https://github.com/AKotov-dev/protonvpn-gui/blob/main/ScreenShots/ProtonVPN-GUI-2.png)
