@@ -82,7 +82,7 @@ object MainForm: TMainForm
     Width = 907
     Align = alBottom
     BorderStyle = sbsSingle
-    Caption = 'Author: alex_q_2000 (C) 2021  License: GPLv3'
+    Caption = 'License: GPLv3  Author: alex_q_2000 (C) 2021'
     Font.Color = clGray
     Font.Height = -11
     Font.Name = 'Sans'

@@ -117,6 +117,7 @@ procedure TMainForm.Button1Click(Sender: TObject);
 begin
   StartProcess('systemctl stop protonvpn.service');
   Shape1.Brush.Color := clYellow;
+  Shape1.Repaint;
 end;
 
 procedure TMainForm.FormShow(Sender: TObject);

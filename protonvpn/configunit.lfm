@@ -12,7 +12,7 @@ object ConfigForm: TConfigForm
   OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'CheckBox1.Checked;Edit1.Text;Edit2.Text;Height;Label4.Caption;Width'
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.0.12.0'
   object FileListBox1: TFileListBox
     Left = 8
     Height = 391

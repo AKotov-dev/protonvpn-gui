@@ -461,14 +461,14 @@ object ConfigForm: TConfigForm
       end>
     OnSavingProperties = XMLPropStorage1SavingProperties
     OnRestoringProperties = XMLPropStorage1RestoringProperties
-    Left = 192
-    Top = 176
+    Left = 368
+    Top = 384
   end
   object OpenDialog1: TOpenDialog
     FileName = '~/'
     Filter = 'ProtonVPN configs (*.zip)|*.zip'
     InitialDir = '~/'
-    Left = 192
-    Top = 104
+    Left = 368
+    Top = 312
   end
 end

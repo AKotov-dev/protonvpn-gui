@@ -61,6 +61,7 @@ up)
   ;;
 down)
   $RESOLVCONF -d "${dev}.inet"
+  pgrep NetworkManager && systemctl restart NetworkManager.service
   ;;
 esac
 

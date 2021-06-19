@@ -73,6 +73,7 @@ begin
     MainForm.Shape1.Brush.Color := clLime
   else
     MainForm.Shape1.Brush.Color := clYellow;
+  MainForm.Shape1.Repaint;
 end;
 
 end.

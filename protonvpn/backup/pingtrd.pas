@@ -45,7 +45,7 @@ begin
       PingProcess.Executable := 'bash';  //sh или xterm
       PingProcess.Parameters.Add('-c');
       PingProcess.Parameters.Add(
-      'if ping -c1 ya.ru &>/dev/null && [[ $(ifconfig | grep tun0) ]]; then echo "yes"; else echo "no"; fi');
+        'if ping -c1 ya.ru &>/dev/null && [[ $(ifconfig | grep tun0) ]]; then echo "yes"; else echo "no"; fi');
 
       PingProcess.Options := PingProcess.Options + [poUsePipes, poWaitOnExit];
       PingProcess.Execute;

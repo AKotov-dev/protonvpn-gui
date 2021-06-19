@@ -58,10 +58,12 @@
         <Filename Value="pingtrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="PingTRD"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="38"/>
-        <CursorPos X="112" Y="48"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="50"/>
+        <CursorPos X="27" Y="76"/>
         <UsageCount Value="25"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="configunit.pas"/>
@@ -69,9 +71,8 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="125"/>
+        <TopLine Value="140"/>
         <CursorPos X="36" Y="157"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
