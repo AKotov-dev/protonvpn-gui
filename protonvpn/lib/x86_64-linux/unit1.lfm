@@ -13,12 +13,15 @@ object MainForm: TMainForm
   SessionProperties = 'Left;Top;Width;Height'
   LCLVersion = '2.0.10.0'
   object Memo1: TMemo
+    AnchorSideTop.Control = ConfigBtn
+    AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 587
-    Top = 48
+    Height = 585
+    Top = 50
     Width = 907
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
+    BorderSpacing.Top = 10
     Font.Height = -12
     Font.Name = 'Sans'
     Lines.Strings = (
@@ -27,7 +30,7 @@ object MainForm: TMainForm
     ParentFont = False
     ReadOnly = True
     ScrollBars = ssVertical
-    TabOrder = 2
+    TabOrder = 3
   end
   object ConfigBtn: TButton
     Left = 8
@@ -42,7 +45,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StopBtn
-    Left = 719
+    Left = 720
     Height = 32
     Top = 8
     Width = 91
@@ -66,14 +69,17 @@ object MainForm: TMainForm
     Shape = stCircle
   end
   object StopBtn: TButton
-    Left = 815
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 816
     Height = 32
     Top = 8
     Width = 83
     Anchors = [akTop, akRight]
+    BorderSpacing.Right = 8
     Caption = 'Stop'
     OnClick = StopBtnClick
-    TabOrder = 3
+    TabOrder = 2
   end
   object StaticText1: TStaticText
     Left = 0

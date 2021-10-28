@@ -48,10 +48,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="106"/>
-        <CursorPos X="3" Y="106"/>
+        <CursorPos X="27" Y="125"/>
         <UsageCount Value="27"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -72,14 +71,40 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <TopLine Value="126"/>
-        <CursorPos X="35" Y="155"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="56"/>
+        <CursorPos X="27" Y="63"/>
         <UsageCount Value="23"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit3>
     </Units>
-    <JumpHistory HistoryIndex="-1"/>
+    <JumpHistory Count="6" HistoryIndex="5">
+      <Position1>
+        <Filename Value="configunit.pas"/>
+        <Caret Line="155" Column="35" TopLine="126"/>
+      </Position1>
+      <Position2>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="106" Column="3" TopLine="106"/>
+      </Position2>
+      <Position3>
+        <Filename Value="configunit.pas"/>
+        <Caret Line="62" Column="27" TopLine="60"/>
+      </Position3>
+      <Position4>
+        <Filename Value="configunit.pas"/>
+        <Caret Line="63" TopLine="61"/>
+      </Position4>
+      <Position5>
+        <Filename Value="configunit.pas"/>
+        <Caret Line="146" Column="5" TopLine="144"/>
+      </Position5>
+      <Position6>
+        <Filename Value="configunit.pas"/>
+        <Caret Line="58" Column="3" TopLine="56"/>
+      </Position6>
+    </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
       <Modes Count="0" ActiveMode="default"/>

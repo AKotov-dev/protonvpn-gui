@@ -27,6 +27,7 @@ type
     procedure Button1Click(Sender: TObject);
     procedure Button2Click(Sender: TObject);
     procedure FileListBox1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure XMLPropStorage1RestoringProperties(Sender: TObject);
@@ -59,6 +60,7 @@ end;
 
 procedure TConfigForm.FormShow(Sender: TObject);
 begin
+  XMLPropStorage1.Restore;
   if FileListBox1.SelCount <> 0 then
     Button2.Enabled := True
   else
@@ -138,6 +140,11 @@ procedure TConfigForm.FileListBox1Click(Sender: TObject);
 begin
   //Запоминаем индекс
   XMLPropStorage1.WriteInteger('findex', FileListBox1.ItemIndex);
+end;
+
+procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  XMLPropStorage1.Save;
 end;
 
 procedure TConfigForm.Button1Click(Sender: TObject);
