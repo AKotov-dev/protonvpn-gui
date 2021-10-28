@@ -22,9 +22,9 @@ type
   end;
 
 //Флаг Ping-а (True/False) - публичный
-var
+{var
   Ping: boolean;
-
+ }
 implementation
 
 uses unit1;
@@ -45,18 +45,13 @@ begin
       PingProcess.Executable := 'bash';  //sh или xterm
       PingProcess.Parameters.Add('-c');
       PingProcess.Parameters.Add(
-        'if ping -c1 ya.ru &>/dev/null && [[ $(ifconfig | grep tun0) ]]; then echo "yes"; else echo "no"; fi');
+        //   'if [[ $(ip a | grep tun0) ]] && ping -c2 google.com &>/dev/null; then echo "yes"; else echo "no"; fi');
+        'if [[ ERR=$(ping google.com -c 3 2>&1 > /dev/null) && $(ip a | grep tun0) ]]; then echo "yes"; else echo "no"; fi');
 
-      PingProcess.Options := PingProcess.Options + [poUsePipes, poWaitOnExit];
+      PingProcess.Options := [poUsePipes, poWaitOnExit];
       PingProcess.Execute;
 
       PingStr.LoadFromStream(PingProcess.Output);
-
-      //Результат проверки ping
-      if PingStr[0] = 'yes' then
-        Ping := True
-      else
-        Ping := False;
 
       Synchronize(@ShowStatus);
 
@@ -69,7 +64,8 @@ end;
 
 procedure CheckPing.ShowStatus;
 begin
-  if Ping then
+  Application.ProcessMessages;
+  if Trim(PingStr[0]) = 'yes' then
     MainForm.Shape1.Brush.Color := clLime
   else
     MainForm.Shape1.Brush.Color := clYellow;

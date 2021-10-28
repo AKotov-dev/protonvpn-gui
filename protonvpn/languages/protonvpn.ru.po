@@ -55,20 +55,20 @@ msgstr "Пароль:"
 msgid "AutoStart"
 msgstr "Автостарт"
 
-#: tmainform.button1.caption
-msgctxt "tmainform.button1.caption"
-msgid "Stop"
-msgstr "Стоп"
-
 #: tmainform.caption
 msgid "ProtonVPN-GUI"
 msgstr ""
 
-#: tmainform.downloadbtn.caption
-msgctxt "tmainform.downloadbtn.caption"
+#: tmainform.configbtn.caption
+msgctxt "tmainform.configbtn.caption"
 msgid "Configuration"
 msgstr "Конфигурация"
 
 #: tmainform.statictext1.caption
 msgid "License: GPLv3  Author: alex_q_2000 (C) 2021"
 msgstr "Лицензия: GPLv3  Автор: alex_q_2000 (C) 2021"
+
+#: tmainform.stopbtn.caption
+msgctxt "tmainform.stopbtn.caption"
+msgid "Stop"
+msgstr "Стоп"

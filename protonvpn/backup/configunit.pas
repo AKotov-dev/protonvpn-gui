@@ -81,6 +81,7 @@ var
   S: TStringList;
 begin
   MainForm.Shape1.Brush.Color := clYellow;
+  MainForm.Shape1.Repaint;
 
   try
     //Создаём файл логин/пароль
@@ -150,8 +151,8 @@ begin
 
     //zip или не zip
     //if Copy(OpenDialog1.FileName, Length(OpenDialog1.FileName) - 3, 4) = '.zip' then
-      RunCommand('/bin/bash', ['-c', 'unzip -o "' + OpenDialog1.FileName +
-        '" -d /etc/protonvpn/'], s);
+    RunCommand('/bin/bash', ['-c', 'unzip -o "' + OpenDialog1.FileName +
+      '" -d /etc/protonvpn/'], s);
    { else
       RunCommand('/bin/bash', ['-c', 'cp -f "' + OpenDialog1.FileName +
         '" /etc/protonvpn/'], s); }

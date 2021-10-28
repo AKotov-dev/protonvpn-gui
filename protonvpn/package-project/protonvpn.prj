@@ -2,7 +2,7 @@
 name=protonvpn
 
 [VERSION]
-version=0.5
+version=0.6
 
 [RELEASE]
 release=0.mrx8
@@ -11,7 +11,7 @@ release=0.mrx8
 group=Applications/Internet
 
 [DESCRIPTION]
-0=Proton VPN Connector
+0=Download the archive of vpn configurations from Proton's personal account and upload them to the program
 1=...
 2=More information: /usr/share/doc/package_name/repack.txt
 
@@ -22,16 +22,16 @@ maintainer=Alex Kotov
 vendor=alex_q_2000 (C) 2021
 
 [SUMMARY]
-summary=Proton VPN Connector
+summary=ProtonVPN-GUI (Proton VPN Connector)
 
 [URLCOPY]
-urlcopy=https://cloud.mail.ru/public/L2K3/HRTMjbSCH
+urlcopy=https://github.com/AKotov-dev/protonvpn-gui
 
 [LICENSE]
 license=GPLv3+
 
 [DEPS]
-deps=openvpn systemd polkit unzip
+deps=openvpn systemd polkit unzip iproute2
 
 [META]
 meta=0
@@ -55,13 +55,13 @@ deb=0
 6=/usr/share/doc/protonvpn/
 
 [URL32]
-url32=https://cloud.mail.ru/public/L2K3/HRTMjbSCH
+url32=https://github.com/AKotov-dev/protonvpn-gui
 
 [URL64]
-url64=https://cloud.mail.ru/public/L2K3/HRTMjbSCH
+url64=https://github.com/AKotov-dev/protonvpn-gui
 
 [PROGRAMNAME]
-programname=Proton VPN Connector
+programname=ProtonVPN-GUI
 
 [DEVTOOL]
 devtool=Lazarus
@@ -70,19 +70,23 @@ devtool=Lazarus
 toolversion=2.0.10
 
 [INFO]
-0=Proton VPN Connector for FREE configurations
-1=---
-2=/etc/protonvpn - рабочая папка
-3=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
-4=/etc/protonvpn/protonvpn.pass - файл с паролями
-5=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
-6=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
-7=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
-8=/usr/bin/protonvpn - пускач через pkexec
-9=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
-10=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
-11=/usr/share/protonvpn - GUI (Lazarus source + bin)
-12=/usr/share/icons/protonvpn.png - иконка в основном меню
-13=/usr/share/doc/protonvpn/repack.txt - инфо
-14=/run/openvpn/protonvpn.pid - индикатор процесса
-15=/var/log/protonvpn.log - лог подключения
+0=v0.6
+1=+ iproute2 support
+2=+ redesigned vpn connection verification
+3=
+4=Proton VPN Connector for FREE configurations
+5=---
+6=/etc/protonvpn - рабочая папка
+7=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
+8=/etc/protonvpn/protonvpn.pass - файл с паролями
+9=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
+10=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
+11=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
+12=/usr/bin/protonvpn - пускач через pkexec
+13=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
+14=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
+15=/usr/share/protonvpn - GUI (Lazarus source + bin)
+16=/usr/share/icons/protonvpn.png - иконка в основном меню
+17=/usr/share/doc/protonvpn/repack.txt - инфо
+18=/run/openvpn/protonvpn.pid - индикатор процесса
+19=/var/log/protonvpn.log - лог подключения

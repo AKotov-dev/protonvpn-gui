@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Height = 649
   Top = 127
   Width = 907
-  ActiveControl = DownloadBtn
+  ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
   ClientHeight = 649
   ClientWidth = 907
@@ -29,20 +29,20 @@ object MainForm: TMainForm
     ScrollBars = ssVertical
     TabOrder = 2
   end
-  object DownloadBtn: TButton
+  object ConfigBtn: TButton
     Left = 8
     Height = 30
     Top = 8
-    Width = 120
+    Width = 128
     Caption = 'Configuration'
-    OnClick = DownloadBtnClick
+    OnClick = ConfigBtnClick
     TabOrder = 0
   end
   object AutoStartCheckBox: TCheckBox
-    AnchorSideTop.Control = Button1
+    AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Button1
-    Left = 727
+    AnchorSideRight.Control = StopBtn
+    Left = 719
     Height = 32
     Top = 7
     Width = 91
@@ -53,11 +53,11 @@ object MainForm: TMainForm
     TabOrder = 1
   end
   object Shape1: TShape
-    AnchorSideLeft.Control = DownloadBtn
+    AnchorSideLeft.Control = ConfigBtn
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = DownloadBtn
+    AnchorSideTop.Control = ConfigBtn
     AnchorSideTop.Side = asrCenter
-    Left = 138
+    Left = 146
     Height = 17
     Top = 15
     Width = 12
@@ -65,14 +65,14 @@ object MainForm: TMainForm
     Brush.Color = clYellow
     Shape = stCircle
   end
-  object Button1: TButton
-    Left = 823
+  object StopBtn: TButton
+    Left = 815
     Height = 30
     Top = 8
-    Width = 75
+    Width = 83
     Anchors = [akTop, akRight]
     Caption = 'Stop'
-    OnClick = Button1Click
+    OnClick = StopBtnClick
     TabOrder = 3
   end
   object StaticText1: TStaticText

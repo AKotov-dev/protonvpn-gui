@@ -1,20 +1,20 @@
 object MainForm: TMainForm
   Left = 305
-  Height = 649
+  Height = 655
   Top = 127
   Width = 907
-  ActiveControl = DownloadBtn
+  ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
-  ClientHeight = 649
+  ClientHeight = 655
   ClientWidth = 907
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poDefault
   SessionProperties = 'Left;Top;Width;Height'
-  LCLVersion = '2.0.12.0'
+  LCLVersion = '2.0.10.0'
   object Memo1: TMemo
     Left = 0
-    Height = 581
+    Height = 587
     Top = 48
     Width = 907
     Align = alBottom
@@ -29,22 +29,22 @@ object MainForm: TMainForm
     ScrollBars = ssVertical
     TabOrder = 2
   end
-  object DownloadBtn: TButton
+  object ConfigBtn: TButton
     Left = 8
-    Height = 30
+    Height = 32
     Top = 8
-    Width = 120
+    Width = 128
     Caption = 'Configuration'
-    OnClick = DownloadBtnClick
+    OnClick = ConfigBtnClick
     TabOrder = 0
   end
   object AutoStartCheckBox: TCheckBox
-    AnchorSideTop.Control = Button1
+    AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
-    AnchorSideRight.Control = Button1
-    Left = 727
+    AnchorSideRight.Control = StopBtn
+    Left = 719
     Height = 32
-    Top = 7
+    Top = 8
     Width = 91
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -53,32 +53,32 @@ object MainForm: TMainForm
     TabOrder = 1
   end
   object Shape1: TShape
-    AnchorSideLeft.Control = DownloadBtn
+    AnchorSideLeft.Control = ConfigBtn
     AnchorSideLeft.Side = asrBottom
-    AnchorSideTop.Control = DownloadBtn
+    AnchorSideTop.Control = ConfigBtn
     AnchorSideTop.Side = asrCenter
-    Left = 138
+    Left = 146
     Height = 17
-    Top = 15
+    Top = 16
     Width = 12
     BorderSpacing.Left = 10
     Brush.Color = clYellow
     Shape = stCircle
   end
-  object Button1: TButton
-    Left = 823
-    Height = 30
+  object StopBtn: TButton
+    Left = 815
+    Height = 32
     Top = 8
-    Width = 75
+    Width = 83
     Anchors = [akTop, akRight]
     Caption = 'Stop'
-    OnClick = Button1Click
+    OnClick = StopBtnClick
     TabOrder = 3
   end
   object StaticText1: TStaticText
     Left = 0
     Height = 20
-    Top = 629
+    Top = 635
     Width = 907
     Align = alBottom
     BorderStyle = sbsSingle

@@ -14,17 +14,17 @@ type
 
   TMainForm = class(TForm)
     AutoStartCheckBox: TCheckBox;
-    Button1: TButton;
+    StopBtn: TButton;
     Shape1: TShape;
-    DownloadBtn: TButton;
+    ConfigBtn: TButton;
     Memo1: TMemo;
     StaticText1: TStaticText;
     Timer1: TTimer;
     XMLPropStorage1: TXMLPropStorage;
     procedure AutoStartCheckBoxChange(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
+    procedure StopBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure DownloadBtnClick(Sender: TObject);
+    procedure ConfigBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure StartProcess(command: string);
@@ -113,7 +113,7 @@ begin
   Screen.Cursor := crDefault;
 end;
 
-procedure TMainForm.Button1Click(Sender: TObject);
+procedure TMainForm.StopBtnClick(Sender: TObject);
 begin
   StartProcess('systemctl stop protonvpn.service');
   Shape1.Brush.Color := clYellow;
@@ -125,7 +125,7 @@ begin
   AutoStartCheckBox.Checked := CheckAutoStart;
 end;
 
-procedure TMainForm.DownloadBtnClick(Sender: TObject);
+procedure TMainForm.ConfigBtnClick(Sender: TObject);
 begin
   ConfigForm.Show;
 end;
