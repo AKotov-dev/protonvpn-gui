@@ -7,7 +7,7 @@ Download `*.zip` archive with configuration files `*.ovpn` from your personal ac
 Note: Don't forget to open the iptables ports required for configurations. Made and tested in Mageia Linux-8.
 
 Before connecting (configuration selection)  
-![Before connecting (configuration selection)](https://github.com/AKotov-dev/protonvpn-gui/blob/main/ScreenShots/ProtonVPN-GUI-1-1.png)
+![](https://github.com/AKotov-dev/protonvpn-gui/blob/main/ScreenShots/ProtonVPN-GUI-1-1.png)
 
 Connection established  
 ![](https://github.com/AKotov-dev/protonvpn-gui/blob/main/ScreenShots/ProtonVPN-GUI-2.png)
