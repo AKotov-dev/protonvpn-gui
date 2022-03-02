@@ -5,7 +5,7 @@ name=protonvpn
 version=0.7
 
 [RELEASE]
-release=0.mrx8
+release=0.mrx9
 
 [GROUP]
 group=Applications/Internet
@@ -72,25 +72,26 @@ toolversion=2.0.10
 [INFO]
 0=v0.7
 1=+ clearing the cache and cookies of browsers before launching
-2=
-3=v0.6
-4=+ iproute2 support
-5=+ Plasma scaling support
-6=+ redesigned vpn connection verification
-7=
-8=Proton VPN Connector for FREE configurations
-9=---
-10=/etc/protonvpn - рабочая папка
-11=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
-12=/etc/protonvpn/protonvpn.pass - файл с паролями
-13=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
-14=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
-15=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
-16=/usr/bin/protonvpn - пускач через pkexec
-17=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
-18=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
-19=/usr/share/protonvpn - GUI (Lazarus source + bin)
-20=/usr/share/icons/protonvpn.png - иконка в основном меню
-21=/usr/share/doc/protonvpn/repack.txt - инфо
-22=/run/openvpn/protonvpn.pid - индикатор процесса
-23=/var/log/protonvpn.log - лог подключения
+2=+ changing the prefix of rpm packages to mrx9
+3=
+4=v0.6
+5=+ iproute2 support
+6=+ Plasma scaling support
+7=+ redesigned vpn connection verification
+8=
+9=Proton VPN Connector for FREE configurations
+10=---
+11=/etc/protonvpn - рабочая папка
+12=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
+13=/etc/protonvpn/protonvpn.pass - файл с паролями
+14=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
+15=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
+16=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
+17=/usr/bin/protonvpn - пускач через pkexec
+18=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
+19=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
+20=/usr/share/protonvpn - GUI (Lazarus source + bin)
+21=/usr/share/icons/protonvpn.png - иконка в основном меню
+22=/usr/share/doc/protonvpn/repack.txt - инфо
+23=/run/openvpn/protonvpn.pid - индикатор процесса
+24=/var/log/protonvpn.log - лог подключения
