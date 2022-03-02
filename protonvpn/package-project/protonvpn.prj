@@ -2,7 +2,7 @@
 name=protonvpn
 
 [VERSION]
-version=0.6
+version=0.7
 
 [RELEASE]
 release=0.mrx8
@@ -70,24 +70,27 @@ devtool=Lazarus
 toolversion=2.0.10
 
 [INFO]
-0=v0.6
-1=+ iproute2 support
-2=+ Plasma scaling support
-3=+ redesigned vpn connection verification
-4=
-5=Proton VPN Connector for FREE configurations
-6=---
-7=/etc/protonvpn - рабочая папка
-8=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
-9=/etc/protonvpn/protonvpn.pass - файл с паролями
-10=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
-11=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
-12=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
-13=/usr/bin/protonvpn - пускач через pkexec
-14=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
-15=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
-16=/usr/share/protonvpn - GUI (Lazarus source + bin)
-17=/usr/share/icons/protonvpn.png - иконка в основном меню
-18=/usr/share/doc/protonvpn/repack.txt - инфо
-19=/run/openvpn/protonvpn.pid - индикатор процесса
-20=/var/log/protonvpn.log - лог подключения
+0=v0.7
+1=+ clearing the cache and cookies of browsers before launching
+2=
+3=v0.6
+4=+ iproute2 support
+5=+ Plasma scaling support
+6=+ redesigned vpn connection verification
+7=
+8=Proton VPN Connector for FREE configurations
+9=---
+10=/etc/protonvpn - рабочая папка
+11=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
+12=/etc/protonvpn/protonvpn.pass - файл с паролями
+13=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
+14=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
+15=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
+16=/usr/bin/protonvpn - пускач через pkexec
+17=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
+18=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
+19=/usr/share/protonvpn - GUI (Lazarus source + bin)
+20=/usr/share/icons/protonvpn.png - иконка в основном меню
+21=/usr/share/doc/protonvpn/repack.txt - инфо
+22=/run/openvpn/protonvpn.pid - индикатор процесса
+23=/var/log/protonvpn.log - лог подключения
