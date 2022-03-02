@@ -14,6 +14,7 @@ type
 
   TMainForm = class(TForm)
     AutoStartCheckBox: TCheckBox;
+    ClearBox: TCheckBox;
     StopBtn: TButton;
     Shape1: TShape;
     ConfigBtn: TButton;
@@ -22,6 +23,7 @@ type
     Timer1: TTimer;
     XMLPropStorage1: TXMLPropStorage;
     procedure AutoStartCheckBoxChange(Sender: TObject);
+    procedure ClearBoxChange(Sender: TObject);
     procedure StopBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure ConfigBtnClick(Sender: TObject);
@@ -48,12 +50,21 @@ uses PingTrd, ConfigUnit;
 //Проверка чекбокса AutoStart
 function CheckAutoStart: boolean;
 var
-  s: ansistring;
+  S: ansistring;
 begin
   RunCommand('/bin/bash', ['-c',
-    '[[ -n $(systemctl is-enabled protonvpn | grep "enabled") ]] && echo "yes"'], s);
+    '[[ -n $(systemctl is-enabled protonvpn | grep "enabled") ]] && echo "yes"'], S);
 
-  if Trim(s) = 'yes' then
+  if Trim(S) = 'yes' then
+    Result := True
+  else
+    Result := False;
+end;
+
+//Проверка чекбокса ClearBox
+function CheckClear: boolean;
+begin
+  if FileExists('/etc/protonvpn/clear-browser') then
     Result := True
   else
     Result := False;
@@ -99,20 +110,33 @@ begin
   LOG.Free;
 end;
 
+//Чекбокс автостарта
 procedure TMainForm.AutoStartCheckBoxChange(Sender: TObject);
 var
-  s: ansistring;
+  S: ansistring;
 begin
   Screen.Cursor := crHourGlass;
   if AutoStartCheckBox.Checked then
-    RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], s)
+    RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], S)
   else
-    RunCommand('/bin/bash', ['-c', 'systemctl disable protonvpn'], s);
+    RunCommand('/bin/bash', ['-c', 'systemctl disable protonvpn'], S);
 
   AutoStartCheckBox.Checked := CheckAutoStart;
   Screen.Cursor := crDefault;
 end;
 
+//Чекбокс очистки кешей и кукисов установленных браузеров
+procedure TMainForm.ClearBoxChange(Sender: TObject);
+var
+  S: ansistring;
+begin
+  if not ClearBox.Checked then
+    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/clear-browser'], S)
+  else
+    RunCommand('/bin/bash', ['-c', 'touch /etc/protonvpn/clear-browser'], S);
+end;
+
+//Останов VPN-соединения
 procedure TMainForm.StopBtnClick(Sender: TObject);
 begin
   StartProcess('systemctl stop protonvpn.service');
@@ -120,10 +144,12 @@ begin
   Shape1.Repaint;
 end;
 
+//Размеры формы (Plasa), состояние чекбоксов
 procedure TMainForm.FormShow(Sender: TObject);
 begin
   XMLPropStorage1.Restore;
   AutoStartCheckBox.Checked := CheckAutoStart;
+  ClearBox.Checked := CheckClear;
 end;
 
 procedure TMainForm.ConfigBtnClick(Sender: TObject);
@@ -131,6 +157,7 @@ begin
   ConfigForm.Show;
 end;
 
+//Инициализация, запуск пинга
 procedure TMainForm.FormCreate(Sender: TObject);
 var
   FCheckPingThread: TThread;

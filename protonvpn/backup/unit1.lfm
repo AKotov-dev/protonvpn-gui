@@ -11,17 +11,17 @@ object MainForm: TMainForm
   OnShow = FormShow
   Position = poDefault
   SessionProperties = 'Left;Top;Width;Height'
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.2.0.4'
   object Memo1: TMemo
     AnchorSideTop.Control = ConfigBtn
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 580
-    Top = 55
+    Height = 585
+    Top = 50
     Width = 907
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
-    BorderSpacing.Top = 15
+    BorderSpacing.Top = 10
     Font.Height = -12
     Font.Name = 'Sans'
     Lines.Strings = (
@@ -94,6 +94,19 @@ object MainForm: TMainForm
     Font.Name = 'Sans'
     ParentFont = False
     TabOrder = 4
+  end
+  object ClearBox: TCheckBox
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = AutoStartCheckBox
+    Left = 391
+    Height = 32
+    Top = 8
+    Width = 319
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 10
+    Caption = 'Clear cache and sockies at startup (Mageia only)'
+    OnChange = ClearBoxChange
+    TabOrder = 5
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

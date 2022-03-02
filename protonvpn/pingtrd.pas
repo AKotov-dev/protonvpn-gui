@@ -45,8 +45,8 @@ begin
       PingProcess.Executable := 'bash';  //sh или xterm
       PingProcess.Parameters.Add('-c');
       PingProcess.Parameters.Add(
-         'if [[ $(ip -br a | grep tun0) ]] && ping -c 2 google.com &> /dev/null; then echo "yes"; else echo "no"; fi');
-      // 'ping -c 1 google.com &> /dev/null && [[ $(ip -br a | grep tun0) ]] && echo "yes" || echo "no"');
+        //   'if [[ $(ip a | grep tun0) ]] && ping -c2 google.com &>/dev/null; then echo "yes"; else echo "no"; fi');
+        'if [[ ERR=$(ping google.com -c 3 2>&1 > /dev/null) && $(ip a | grep tun0) ]]; then echo "yes"; else echo "no"; fi');
 
       PingProcess.Options := [poUsePipes, poWaitOnExit];
       PingProcess.Execute;

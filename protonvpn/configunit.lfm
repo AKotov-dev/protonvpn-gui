@@ -13,12 +13,12 @@ object ConfigForm: TConfigForm
   OnShow = FormShow
   Position = poMainFormCenter
   SessionProperties = 'CheckBox1.Checked;Edit1.Text;Edit2.Text;Height;Label4.Caption;Width;Height;Width'
-  LCLVersion = '2.0.10.0'
+  LCLVersion = '2.2.0.4'
   object FileListBox1: TFileListBox
     AnchorSideLeft.Control = Owner
     AnchorSideTop.Control = Edit2
     AnchorSideTop.Side = asrBottom
-    AnchorSideRight.Control = Button1
+    AnchorSideRight.Control = LoadBtn
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 5
@@ -36,29 +36,27 @@ object ConfigForm: TConfigForm
     MultiSelect = True
     OnChange = FileListBox1Click
     OnClick = FileListBox1Click
-    OnDblClick = Button2Click
+    OnDblClick = RestartBtnClick
     TabOrder = 2
   end
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
     AnchorSideTop.Side = asrCenter
     Left = 5
-    Height = 15
-    Top = 19
+    Height = 17
+    Top = 18
     Width = 37
     Caption = 'Login:'
-    ParentColor = False
   end
   object Label2: TLabel
     AnchorSideTop.Control = Edit2
     AnchorSideTop.Side = asrCenter
     Left = 5
-    Height = 15
-    Top = 57
+    Height = 17
+    Top = 56
     Width = 61
     BorderSpacing.Right = 4
     Caption = 'Password:'
-    ParentColor = False
   end
   object Edit1: TEdit
     AnchorSideLeft.Control = Label1
@@ -93,7 +91,7 @@ object ConfigForm: TConfigForm
     PasswordChar = '*'
     TabOrder = 1
   end
-  object Button1: TButton
+  object LoadBtn: TButton
     AnchorSideLeft.Control = FileListBox1
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = FileListBox1
@@ -108,12 +106,12 @@ object ConfigForm: TConfigForm
     BorderSpacing.Left = 5
     BorderSpacing.Right = 5
     Caption = 'Load'
-    OnClick = Button1Click
+    OnClick = LoadBtnClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 3
   end
-  object Button2: TButton
+  object RestartBtn: TButton
     AnchorSideLeft.Control = FileListBox1
     AnchorSideLeft.Side = asrBottom
     AnchorSideRight.Control = Owner
@@ -129,11 +127,11 @@ object ConfigForm: TConfigForm
     BorderSpacing.Right = 5
     BorderSpacing.Bottom = 5
     Caption = 'Restart'
-    OnClick = Button2Click
+    OnClick = RestartBtnClick
     TabOrder = 5
   end
   object Image1: TImage
-    AnchorSideLeft.Control = Button1
+    AnchorSideLeft.Control = LoadBtn
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = CheckBox1
     AnchorSideTop.Side = asrBottom
@@ -474,8 +472,8 @@ object ConfigForm: TConfigForm
     }
   end
   object CheckBox1: TCheckBox
-    AnchorSideLeft.Control = Button1
-    AnchorSideTop.Control = Button1
+    AnchorSideLeft.Control = LoadBtn
+    AnchorSideTop.Control = LoadBtn
     AnchorSideTop.Side = asrBottom
     Left = 356
     Height = 32

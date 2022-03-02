@@ -13,8 +13,8 @@ type
   { TConfigForm }
 
   TConfigForm = class(TForm)
-    Button1: TButton;
-    Button2: TButton;
+    LoadBtn: TButton;
+    RestartBtn: TButton;
     CheckBox1: TCheckBox;
     Edit1: TEdit;
     Edit2: TEdit;
@@ -24,8 +24,8 @@ type
     Label2: TLabel;
     OpenDialog1: TOpenDialog;
     XMLPropStorage1: TXMLPropStorage;
-    procedure Button1Click(Sender: TObject);
-    procedure Button2Click(Sender: TObject);
+    procedure LoadBtnClick(Sender: TObject);
+    procedure RestartBtnClick(Sender: TObject);
     procedure FileListBox1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
@@ -38,10 +38,6 @@ type
 
   end;
 
-//Ресурсы перевода
-//resourcestring
-//SDeleteRecords = 'Delete selected entries other than the active one?';
-
 var
   ConfigForm: TConfigForm;
 
@@ -53,18 +49,20 @@ uses Unit1;
 
 { TConfigForm }
 
+//Конфигурация-настройки
 procedure TConfigForm.FormCreate(Sender: TObject);
 begin
   ConfigForm.XMLPropStorage1.FileName := MainForm.XMLPropStorage1.FileName;
 end;
 
+//Состояние Reatart
 procedure TConfigForm.FormShow(Sender: TObject);
 begin
   XMLPropStorage1.Restore;
   if FileListBox1.SelCount <> 0 then
-    Button2.Enabled := True
+    RestartBtn.Enabled := True
   else
-    Button2.Enabled := False;
+    RestartBtn.Enabled := False;
 end;
 
 procedure TConfigForm.XMLPropStorage1RestoringProperties(Sender: TObject);
@@ -78,7 +76,7 @@ begin
   XMLPropStorage1.StoredValue['findex'] := IntToStr(FileListBox1.ItemIndex);
 end;
 
-procedure TConfigForm.Button2Click(Sender: TObject);
+procedure TConfigForm.RestartBtnClick(Sender: TObject);
 var
   S: TStringList;
 begin
@@ -144,10 +142,10 @@ end;
 
 procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
-  //XMLPropStorage1.Save;
+  XMLPropStorage1.Save;
 end;
 
-procedure TConfigForm.Button1Click(Sender: TObject);
+procedure TConfigForm.LoadBtnClick(Sender: TObject);
 var
   s: ansistring;
 begin
@@ -169,7 +167,7 @@ begin
     FileListBox1.ItemIndex := 0;
     FileLIstBox1.Click;
 
-    Button2.Enabled := True;
+    RestartBtn.Enabled := True;
   end;
 end;
 

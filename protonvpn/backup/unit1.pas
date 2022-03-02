@@ -14,6 +14,7 @@ type
 
   TMainForm = class(TForm)
     AutoStartCheckBox: TCheckBox;
+    ClearBox: TCheckBox;
     StopBtn: TButton;
     Shape1: TShape;
     ConfigBtn: TButton;
@@ -22,6 +23,7 @@ type
     Timer1: TTimer;
     XMLPropStorage1: TXMLPropStorage;
     procedure AutoStartCheckBoxChange(Sender: TObject);
+    procedure ClearBoxChange(Sender: TObject);
     procedure StopBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure ConfigBtnClick(Sender: TObject);
@@ -54,6 +56,15 @@ begin
     '[[ -n $(systemctl is-enabled protonvpn | grep "enabled") ]] && echo "yes"'], s);
 
   if Trim(s) = 'yes' then
+    Result := True
+  else
+    Result := False;
+end;
+
+//Проверка чекбокса ClearBox
+function CheckClear: boolean;
+begin
+  if FileExists('/etc/protonvpn/clear-browser') then
     Result := True
   else
     Result := False;
@@ -113,6 +124,16 @@ begin
   Screen.Cursor := crDefault;
 end;
 
+procedure TMainForm.ClearBoxChange(Sender: TObject);
+var
+  s: ansistring;
+begin
+  if not ClearBox.Checked then
+    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/clear-browser'], s)
+  else
+    RunCommand('/bin/bash', ['-c', 'touch /etc/protonvpn/clear-browser'], s);
+end;
+
 procedure TMainForm.StopBtnClick(Sender: TObject);
 begin
   StartProcess('systemctl stop protonvpn.service');
@@ -124,6 +145,7 @@ procedure TMainForm.FormShow(Sender: TObject);
 begin
   XMLPropStorage1.Restore;
   AutoStartCheckBox.Checked := CheckAutoStart;
+  ClearBox.Checked := CheckClear;
 end;
 
 procedure TMainForm.ConfigBtnClick(Sender: TObject);
