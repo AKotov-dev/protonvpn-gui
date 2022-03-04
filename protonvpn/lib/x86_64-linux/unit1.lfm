@@ -45,7 +45,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StopBtn
-    Left = 720
+    Left = 718
     Height = 32
     Top = 8
     Width = 91
@@ -71,10 +71,10 @@ object MainForm: TMainForm
   object StopBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 816
+    Left = 814
     Height = 32
     Top = 8
-    Width = 83
+    Width = 85
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 8
     Caption = 'Stop'
@@ -100,7 +100,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = AutoStartCheckBox
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
-    Left = 391
+    Left = 389
     Height = 32
     Top = 8
     Width = 319
