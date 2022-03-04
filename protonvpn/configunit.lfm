@@ -1,18 +1,18 @@
 object ConfigForm: TConfigForm
-  Left = 482
-  Height = 472
-  Top = 205
+  Left = 464
+  Height = 511
+  Top = 174
   Width = 492
   ActiveControl = FileListBox1
   Caption = 'Configuration'
-  ClientHeight = 472
+  ClientHeight = 511
   ClientWidth = 492
   FormStyle = fsStayOnTop
   OnClose = FormClose
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poMainFormCenter
-  SessionProperties = 'CheckBox1.Checked;Edit1.Text;Edit2.Text;Height;Label4.Caption;Width;Height;Width'
+  SessionProperties = 'CheckBox1.Checked;Edit1.Text;Edit2.Text;Height;Label4.Caption;Width;OpenDialog1.InitialDir'
   LCLVersion = '2.2.0.4'
   object FileListBox1: TFileListBox
     AnchorSideLeft.Control = Owner
@@ -22,7 +22,7 @@ object ConfigForm: TConfigForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 5
-    Height = 380
+    Height = 419
     Top = 87
     Width = 346
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -120,7 +120,7 @@ object ConfigForm: TConfigForm
     AnchorSideBottom.Side = asrBottom
     Left = 356
     Height = 32
-    Top = 435
+    Top = 474
     Width = 131
     Anchors = [akRight, akBottom]
     BorderSpacing.Left = 5

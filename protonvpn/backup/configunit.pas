@@ -55,7 +55,7 @@ begin
   ConfigForm.XMLPropStorage1.FileName := MainForm.XMLPropStorage1.FileName;
 end;
 
-//Состояние Reatart
+//Состояние ReatartBtn, размеры формы (Plasma)
 procedure TConfigForm.FormShow(Sender: TObject);
 begin
   XMLPropStorage1.Restore;
@@ -65,17 +65,20 @@ begin
     RestartBtn.Enabled := False;
 end;
 
+//Восстановить индекс записи в списке
 procedure TConfigForm.XMLPropStorage1RestoringProperties(Sender: TObject);
 begin
   FileListBox1.ItemIndex := XMLPropStorage1.ReadInteger('findex', -1);
   FileListBox1.Click;
 end;
 
+//Сохранить индекс записи в списке
 procedure TConfigForm.XMLPropStorage1SavingProperties(Sender: TObject);
 begin
   XMLPropStorage1.StoredValue['findex'] := IntToStr(FileListBox1.ItemIndex);
 end;
 
+//Запуск/Перезапуск VPN-соединения
 procedure TConfigForm.RestartBtnClick(Sender: TObject);
 var
   S: TStringList;
@@ -134,30 +137,32 @@ begin
   end;
 end;
 
+//Перемещение в списке, запоминаем индекс
 procedure TConfigForm.FileListBox1Click(Sender: TObject);
 begin
-  //Запоминаем индекс
   XMLPropStorage1.WriteInteger('findex', FileListBox1.ItemIndex);
 end;
 
+//Сохраняем настройки
 procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   XMLPropStorage1.Save;
 end;
 
+//Загрузка ключей из архива ZIP
 procedure TConfigForm.LoadBtnClick(Sender: TObject);
 var
-  s: ansistring;
+  S: ansistring;
 begin
   if OpenDialog1.Execute then
   begin
     //Удаление старых *.ovpn
-    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*protonvpn.com*'], s);
+    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*protonvpn.com*'], S);
 
     //zip или не zip
     //if Copy(OpenDialog1.FileName, Length(OpenDialog1.FileName) - 3, 4) = '.zip' then
     RunCommand('/bin/bash', ['-c', 'unzip -o "' + OpenDialog1.FileName +
-      '" -d /etc/protonvpn/'], s);
+      '" -d /etc/protonvpn/'], S);
    { else
       RunCommand('/bin/bash', ['-c', 'cp -f "' + OpenDialog1.FileName +
         '" /etc/protonvpn/'], s); }

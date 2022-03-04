@@ -50,7 +50,7 @@ msgid "ProtonVPN-GUI"
 msgstr ""
 
 #: tmainform.clearbox.caption
-msgid "Clear cache and sockies at startup (Mageia only)"
+msgid "Сlearing the cache and cookies at startup (Mageia only)"
 msgstr ""
 
 #: tmainform.configbtn.caption
