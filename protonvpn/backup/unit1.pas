@@ -50,12 +50,12 @@ uses PingTrd, ConfigUnit;
 //Проверка чекбокса AutoStart
 function CheckAutoStart: boolean;
 var
-  s: ansistring;
+  S: ansistring;
 begin
   RunCommand('/bin/bash', ['-c',
-    '[[ -n $(systemctl is-enabled protonvpn | grep "enabled") ]] && echo "yes"'], s);
+    '[[ -n $(systemctl is-enabled protonvpn | grep "enabled") ]] && echo "yes"'], S);
 
-  if Trim(s) = 'yes' then
+  if Trim(S) = 'yes' then
     Result := True
   else
     Result := False;
@@ -110,30 +110,33 @@ begin
   LOG.Free;
 end;
 
+//Чекбокс автостарта
 procedure TMainForm.AutoStartCheckBoxChange(Sender: TObject);
 var
-  s: ansistring;
+  S: ansistring;
 begin
   Screen.Cursor := crHourGlass;
   if AutoStartCheckBox.Checked then
-    RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], s)
+    RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], S)
   else
-    RunCommand('/bin/bash', ['-c', 'systemctl disable protonvpn'], s);
+    RunCommand('/bin/bash', ['-c', 'systemctl disable protonvpn'], S);
 
   AutoStartCheckBox.Checked := CheckAutoStart;
   Screen.Cursor := crDefault;
 end;
 
+//Чекбокс очистки кешей и кукисов установленных браузеров
 procedure TMainForm.ClearBoxChange(Sender: TObject);
 var
-  s: ansistring;
+  S: ansistring;
 begin
   if not ClearBox.Checked then
-    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/clear-browser'], s)
+    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/clear-browser'], S)
   else
-    RunCommand('/bin/bash', ['-c', 'touch /etc/protonvpn/clear-browser'], s);
+    RunCommand('/bin/bash', ['-c', 'touch /etc/protonvpn/clear-browser'], S);
 end;
 
+//Останов VPN-соединения
 procedure TMainForm.StopBtnClick(Sender: TObject);
 begin
   StartProcess('systemctl stop protonvpn.service');
@@ -141,6 +144,7 @@ begin
   Shape1.Repaint;
 end;
 
+//Размеры формы (Plasa), состояние чекбоксов
 procedure TMainForm.FormShow(Sender: TObject);
 begin
   XMLPropStorage1.Restore;
@@ -153,6 +157,7 @@ begin
   ConfigForm.Show;
 end;
 
+//Инициализация, запуск пинга
 procedure TMainForm.FormCreate(Sender: TObject);
 var
   FCheckPingThread: TThread;

@@ -97,6 +97,8 @@ object MainForm: TMainForm
   end
   object ClearBox: TCheckBox
     AnchorSideLeft.Side = asrBottom
+    AnchorSideTop.Control = AutoStartCheckBox
+    AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
     Left = 391
     Height = 32
