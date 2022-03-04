@@ -3,6 +3,6 @@
 {"hash":116154878,"name":"tmainform.configbtn.caption","sourcebytes":[67,111,110,102,105,103,117,114,97,116,105,111,110],"value":"Configuration"},
 {"hash":189456468,"name":"tmainform.autostartcheckbox.caption","sourcebytes":[65,117,116,111,83,116,97,114,116],"value":"AutoStart"},
 {"hash":371552,"name":"tmainform.stopbtn.caption","sourcebytes":[83,116,111,112],"value":"Stop"},
-{"hash":199062849,"name":"tmainform.statictext1.caption","sourcebytes":[76,105,99,101,110,115,101,58,32,71,80,76,118,51,32,32,65,117,116,104,111,114,58,32,97,108,101,120,95,113,95,50,48,48,48,32,40,67,41,32,50,48,50,49],"value":"License: GPLv3  Author: alex_q_2000 (C) 2021"},
+{"hash":248956965,"name":"tmainform.statictext1.caption","sourcebytes":[76,105,99,101,110,115,101,58,32,71,80,76,118,51,32,32,32,65,117,116,104,111,114,58,32,97,108,101,120,95,113,95,50,48,48,48,32,40,67,41,32,50,48,50,50,32,32,32,85,82,76,58,32,104,116,116,112,115,58,47,47,108,105,110,117,120,102,111,114,117,109,46,114,117],"value":"License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"},
 {"hash":129019177,"name":"tmainform.clearbox.caption","sourcebytes":[67,108,101,97,114,32,99,97,99,104,101,32,97,110,100,32,115,111,99,107,105,101,115,32,97,116,32,115,116,97,114,116,117,112,32,40,77,97,103,101,105,97,32,111,110,108,121,41],"value":"Clear cache and sockies at startup (Mageia only)"}
 ]}

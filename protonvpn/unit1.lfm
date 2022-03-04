@@ -1,11 +1,11 @@
 object MainForm: TMainForm
-  Left = 305
-  Height = 655
-  Top = 127
+  Left = 303
+  Height = 665
+  Top = 123
   Width = 907
   ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
-  ClientHeight = 655
+  ClientHeight = 665
   ClientWidth = 907
   OnCreate = FormCreate
   OnShow = FormShow
@@ -16,7 +16,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = ConfigBtn
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 585
+    Height = 595
     Top = 50
     Width = 907
     Align = alBottom
@@ -84,11 +84,11 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 0
     Height = 20
-    Top = 635
+    Top = 645
     Width = 907
     Align = alBottom
     BorderStyle = sbsSingle
-    Caption = 'License: GPLv3  Author: alex_q_2000 (C) 2021'
+    Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
     Font.Color = clGray
     Font.Height = -11
     Font.Name = 'Sans'

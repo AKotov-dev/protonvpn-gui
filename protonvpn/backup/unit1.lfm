@@ -88,7 +88,7 @@ object MainForm: TMainForm
     Width = 907
     Align = alBottom
     BorderStyle = sbsSingle
-    Caption = 'License: GPLv3  Author: alex_q_2000 (C) 2021'
+    Caption = 'License: GPLv3  Author: alex_q_2000 (C) 2022 URL: https://linuxforum.ru'
     Font.Color = clGray
     Font.Height = -11
     Font.Name = 'Sans'
@@ -98,6 +98,7 @@ object MainForm: TMainForm
   object ClearBox: TCheckBox
     AnchorSideLeft.Side = asrBottom
     AnchorSideTop.Control = AutoStartCheckBox
+    AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
     Left = 391
     Height = 32

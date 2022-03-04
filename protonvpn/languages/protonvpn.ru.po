@@ -39,13 +39,11 @@ msgid "Password:"
 msgstr "Пароль:"
 
 #: tconfigform.loadbtn.caption
-#, fuzzy
 msgctxt "tconfigform.loadbtn.caption"
 msgid "Load"
 msgstr "Загрузить"
 
 #: tconfigform.loadbtn.hint
-#, fuzzy
 msgctxt "tconfigform.loadbtn.hint"
 msgid "Load ProtonVPN_server_configs.zip"
 msgstr "Загрузить ProtonVPN_server_configs.zip"
@@ -73,11 +71,10 @@ msgid "Configuration"
 msgstr "Конфигурация"
 
 #: tmainform.statictext1.caption
-msgid "License: GPLv3  Author: alex_q_2000 (C) 2021"
-msgstr "Лицензия: GPLv3  Автор: alex_q_2000 (C) 2021"
+msgid "License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
+msgstr "Лицензия: GPLv3   Автор: alex_q_2000 (C) 2022   URL: https://linuxforum.ru"
 
 #: tmainform.stopbtn.caption
 msgctxt "tmainform.stopbtn.caption"
 msgid "Stop"
 msgstr "Стоп"
-
