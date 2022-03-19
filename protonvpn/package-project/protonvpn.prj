@@ -2,7 +2,7 @@
 name=protonvpn
 
 [VERSION]
-version=0.7
+version=0.8
 
 [RELEASE]
 release=0.mrx9
@@ -67,31 +67,35 @@ programname=ProtonVPN-GUI
 devtool=Lazarus
 
 [TOOLVERSION]
-toolversion=2.0.10
+toolversion=2.2.0
 
 [INFO]
-0=v0.7
-1=+ clearing the cache and cookies of browsers before launching
-2=+ changing the prefix of rpm packages to mrx9
+0=v0.8
+1=+ indication of any active tun[x] interface
+2=+ compatibility with configurations from other sources
 3=
-4=v0.6
-5=+ iproute2 support
-6=+ Plasma scaling support
-7=+ redesigned vpn connection verification
-8=
-9=Proton VPN Connector for FREE configurations
-10=---
-11=/etc/protonvpn - рабочая папка
-12=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
-13=/etc/protonvpn/protonvpn.pass - файл с паролями
-14=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
-15=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
-16=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
-17=/usr/bin/protonvpn - пускач через pkexec
-18=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
-19=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
-20=/usr/share/protonvpn - GUI (Lazarus source + bin)
-21=/usr/share/icons/protonvpn.png - иконка в основном меню
-22=/usr/share/doc/protonvpn/repack.txt - инфо
-23=/run/openvpn/protonvpn.pid - индикатор процесса
-24=/var/log/protonvpn.log - лог подключения
+4=v0.7
+5=+ clearing the cache and cookies of browsers before launching
+6=+ changing the prefix of rpm packages to mrx9
+7=
+8=v0.6
+9=+ iproute2 support
+10=+ Plasma scaling support
+11=+ redesigned vpn connection verification
+12=
+13=Proton VPN Connector for FREE configurations
+14=---
+15=/etc/protonvpn - рабочая папка
+16=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
+17=/etc/protonvpn/protonvpn.pass - файл с паролями
+18=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
+19=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
+20=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
+21=/usr/bin/protonvpn - пускач через pkexec
+22=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
+23=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
+24=/usr/share/protonvpn - GUI (Lazarus source + bin)
+25=/usr/share/icons/protonvpn.png - иконка в основном меню
+26=/usr/share/doc/protonvpn/repack.txt - инфо
+27=/run/openvpn/protonvpn.pid - индикатор процесса
+28=/var/log/protonvpn.log - лог подключения

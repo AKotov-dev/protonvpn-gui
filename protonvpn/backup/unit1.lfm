@@ -100,13 +100,13 @@ object MainForm: TMainForm
     AnchorSideTop.Control = AutoStartCheckBox
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
-    Left = 394
+    Left = 324
     Height = 32
     Top = 8
-    Width = 319
+    Width = 389
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
-    Caption = 'Clear cache and sockies at startup (Mageia only)'
+    Caption = 'Сlearing the cache and cookies at GUI startup (Mageia only)'
     OnChange = ClearBoxChange
     TabOrder = 5
   end

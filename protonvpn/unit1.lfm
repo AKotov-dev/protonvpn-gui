@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 303
+  Left = 288
   Height = 665
-  Top = 123
+  Top = 122
   Width = 907
   ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
@@ -100,13 +100,13 @@ object MainForm: TMainForm
     AnchorSideTop.Control = AutoStartCheckBox
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
-    Left = 350
+    Left = 324
     Height = 32
     Top = 8
-    Width = 363
+    Width = 389
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
-    Caption = 'Сlearing the cache and cookies at startup (Mageia only)'
+    Caption = 'Сlearing the cache and cookies at GUI startup (Mageia only)'
     OnChange = ClearBoxChange
     TabOrder = 5
   end
