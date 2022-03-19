@@ -46,7 +46,8 @@ begin
       PingProcess.Parameters.Add('-c');
       PingProcess.Parameters.Add(
         //   'if [[ $(ip a | grep tun0) ]] && ping -c2 google.com &>/dev/null; then echo "yes"; else echo "no"; fi');
-        'if [[ ERR=$(ping google.com -c 1 2>&1 > /dev/null) && $(ip a |  cut -f2 -d" " | grep tun) ]]; then echo "yes"; else echo "no"; fi');
+      //  'if [[ ERR=$(ping google.com -c 3 2>&1 > /dev/null) && $(ip a | cut -f2 -d" " | grep tun) ]]; then echo "yes"; else echo "no"; fi');
+      'ping -c 2 google.com &> /dev/null && [[ $(ip -br a | grep tun[[:digit:]]) ]] && echo "yes" || echo "no"');
 
       PingProcess.Options := [poUsePipes, poWaitOnExit];
       PingProcess.Execute;
@@ -55,7 +56,7 @@ begin
 
       Synchronize(@ShowStatus);
 
-      Sleep(1500);
+      Sleep(1000);
     finally
       PingStr.Free;
       PingProcess.Free;

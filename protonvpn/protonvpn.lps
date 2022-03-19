@@ -59,9 +59,9 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="PingTRD"/>
         <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="37"/>
-        <CursorPos X="73" Y="49"/>
+        <CursorPos X="40" Y="41"/>
         <UsageCount Value="26"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -71,12 +71,10 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="147"/>
         <CursorPos X="32" Y="152"/>
         <UsageCount Value="24"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit3>
     </Units>
     <JumpHistory HistoryIndex="-1"/>
