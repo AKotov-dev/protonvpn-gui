@@ -48,6 +48,7 @@ begin
         //   'if [[ $(ip a | grep tun0) ]] && ping -c2 google.com &>/dev/null; then echo "yes"; else echo "no"; fi');
         //  'if [[ ERR=$(ping google.com -c 3 2>&1 > /dev/null) && $(ip a | cut -f2 -d" " | grep tun) ]]; then echo "yes"; else echo "no"; fi');
         'ping -c 2 google.com &> /dev/null && [[ $(ip -br a | grep tun[[:digit:]]) ]] && echo "yes" || echo "no"');
+      // '[[ $(fping ya.ru -c1 -t500) && $(ip -br a | grep tun[[:digit:]]) ]] && echo "yes" || echo "no"');
 
       PingProcess.Options := [poUsePipes, poWaitOnExit];
       PingProcess.Execute;
@@ -65,13 +66,12 @@ end;
 
 procedure CheckPing.ShowStatus;
 begin
-  Application.ProcessMessages;
   if Trim(PingStr[0]) = 'yes' then
     MainForm.Shape1.Brush.Color := clLime
   else
     MainForm.Shape1.Brush.Color := clYellow;
+
   MainForm.Shape1.Repaint;
-  MainForm.Shape1.Update;
 end;
 
 end.
