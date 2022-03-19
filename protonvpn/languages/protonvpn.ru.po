@@ -62,10 +62,8 @@ msgid "ProtonVPN-GUI"
 msgstr ""
 
 #: tmainform.clearbox.caption
-#, fuzzy
-#| msgid "Сlearing the cache and cookies at startup (Mageia only)"
 msgid "Сlearing the cache and cookies at GUI startup (Mageia only)"
-msgstr "Очистить кеш и cookies при старте (только Mageia)"
+msgstr "Очистить кеш и cookies при старте GUI (только Mageia)"
 
 #: tmainform.configbtn.caption
 msgctxt "tmainform.configbtn.caption"
@@ -80,4 +78,3 @@ msgstr "Лицензия: GPLv3   Автор: alex_q_2000 (C) 2022   URL: https:
 msgctxt "tmainform.stopbtn.caption"
 msgid "Stop"
 msgstr "Стоп"
-
