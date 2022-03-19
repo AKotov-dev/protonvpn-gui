@@ -1,12 +1,12 @@
 object MainForm: TMainForm
-  Left = 288
-  Height = 665
-  Top = 122
-  Width = 907
+  Left = 292
+  Height = 684
+  Top = 124
+  Width = 937
   ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
-  ClientHeight = 665
-  ClientWidth = 907
+  ClientHeight = 684
+  ClientWidth = 937
   OnCreate = FormCreate
   OnShow = FormShow
   Position = poDefault
@@ -16,9 +16,9 @@ object MainForm: TMainForm
     AnchorSideTop.Control = ConfigBtn
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 595
+    Height = 614
     Top = 50
-    Width = 907
+    Width = 937
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Top = 10
@@ -45,7 +45,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StopBtn
-    Left = 718
+    Left = 743
     Height = 32
     Top = 8
     Width = 91
@@ -71,10 +71,10 @@ object MainForm: TMainForm
   object StopBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 814
+    Left = 839
     Height = 32
     Top = 8
-    Width = 85
+    Width = 90
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 8
     Caption = 'Stop'
@@ -84,8 +84,8 @@ object MainForm: TMainForm
   object StaticText1: TStaticText
     Left = 0
     Height = 20
-    Top = 645
-    Width = 907
+    Top = 664
+    Width = 937
     Align = alBottom
     BorderStyle = sbsSingle
     Caption = 'License: GPLv3   Author: alex_q_2000 (C) 2022   URL: https://linuxforum.ru'
@@ -100,7 +100,7 @@ object MainForm: TMainForm
     AnchorSideTop.Control = AutoStartCheckBox
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
-    Left = 324
+    Left = 349
     Height = 32
     Top = 8
     Width = 389
@@ -112,12 +112,12 @@ object MainForm: TMainForm
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 832
+    Left = 864
     Top = 64
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <>
-    Left = 744
+    Left = 776
     Top = 64
   end
 end

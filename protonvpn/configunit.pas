@@ -157,7 +157,7 @@ begin
   if OpenDialog1.Execute then
   begin
     //Удаление старых *.ovpn
-    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*protonvpn.com*'], S);
+    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*.ovpn'], S);
 
     //zip или не zip
     //if Copy(OpenDialog1.FileName, Length(OpenDialog1.FileName) - 3, 4) = '.zip' then
