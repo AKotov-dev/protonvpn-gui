@@ -5,7 +5,7 @@ unit PingTRD;
 interface
 
 uses
-  Classes, Forms, Controls, SysUtils, Process, StdCtrls, Graphics;
+  Classes, Forms, Controls, SysUtils, Process, Graphics;
 
 type
   CheckPing = class(TThread)

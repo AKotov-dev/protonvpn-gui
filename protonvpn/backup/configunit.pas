@@ -127,7 +127,8 @@ begin
     //Попутно удаляем коннект на 80-тый порт из конфига (иногда не подключается на FREE)
     Mainform.StartProcess(
       'chmod 600 /etc/protonvpn/protonvpn.pass; sed -i "/remote.*80/ d" ' +
-      ConfigForm.FileListBox1.FileName +
+      ConfigForm.FileListBox1.FileName + '; sed -i ' + '''' +
+      's/^persist-tun*/#persist-tun/' + '''' + ConfigForm.FileListBox1.FileName +
       '; systemctl daemon-reload; systemctl stop protonvpn.service; ' +
       'systemctl restart protonvpn.service');
 
@@ -157,7 +158,7 @@ begin
   if OpenDialog1.Execute then
   begin
     //Удаление старых *.ovpn
-    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*protonvpn.com*'], S);
+    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*.ovpn'], S);
 
     //zip или не zip
     //if Copy(OpenDialog1.FileName, Length(OpenDialog1.FileName) - 3, 4) = '.zip' then

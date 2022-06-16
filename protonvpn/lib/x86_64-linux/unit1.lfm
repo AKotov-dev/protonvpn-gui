@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 292
+  Left = 315
   Height = 684
-  Top = 124
+  Top = 122
   Width = 937
   ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'

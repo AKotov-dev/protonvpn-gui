@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 292
+  Left = 315
   Height = 684
-  Top = 124
+  Top = 122
   Width = 937
   ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
@@ -110,14 +110,23 @@ object MainForm: TMainForm
     OnChange = ClearBoxChange
     TabOrder = 5
   end
+  object Button1: TButton
+    Left = 184
+    Height = 25
+    Top = 10
+    Width = 75
+    Caption = 'Button1'
+    OnClick = Button1Click
+    TabOrder = 6
+  end
   object Timer1: TTimer
     OnTimer = Timer1Timer
-    Left = 832
+    Left = 864
     Top = 64
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <>
-    Left = 744
+    Left = 776
     Top = 64
   end
 end
