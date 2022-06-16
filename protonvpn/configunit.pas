@@ -114,7 +114,7 @@ begin
       S.Add('--script-security 2 --up /etc/protonvpn/update-resolv-conf \');
       S.Add('--down /etc/protonvpn/update-resolv-conf \');
     end;
-
+    //--ping-restart 10?
     S.Add('--mute-replay-warnings --auth-user-pass /etc/protonvpn/protonvpn.pass');
     S.Add('');
 

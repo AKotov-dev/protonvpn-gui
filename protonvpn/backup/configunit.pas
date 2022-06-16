@@ -115,7 +115,7 @@ begin
       S.Add('--down /etc/protonvpn/update-resolv-conf \');
     end;
 
-    S.Add('--mute-replay-warnings --auth-user-pass /etc/protonvpn/protonvpn.pass');
+    S.Add('--ping-restart 10 --mute-replay-warnings --auth-user-pass /etc/protonvpn/protonvpn.pass');
     S.Add('');
 
     S.Add('[Install]');
@@ -124,11 +124,11 @@ begin
   finally
     S.Free;
 
-    //Попутно удаляем коннект на 80-тый порт из конфига (иногда не подключается на FREE)
+    //Попутно удаляем коннект на 80-тый порт из конфига (иногда не подключается на FREE и ставим #persist-tun)
     Mainform.StartProcess(
       'chmod 600 /etc/protonvpn/protonvpn.pass; sed -i "/remote.*80/ d" ' +
       ConfigForm.FileListBox1.FileName + '; sed -i ' + '''' +
-      's/^persist-tun*/#persist-tun/' + '''' + ConfigForm.FileListBox1.FileName +
+      's/^persist-tun*/#persist-tun/' + '''' + ' ' + ConfigForm.FileListBox1.FileName +
       '; systemctl daemon-reload; systemctl stop protonvpn.service; ' +
       'systemctl restart protonvpn.service');
 
