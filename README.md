@@ -2,9 +2,9 @@
 
 Dependencies: openvpn unzip systemd
 
-Download `*.zip` archive with configuration files `*.ovpn` from your personal account, upload to the client and connect.
+Download `*.zip` archive with configuration files `*.ovpn` (for Android) from your personal account, upload to the client and connect.
 
-Note: Don't forget to open the iptables ports required for configurations. Made and tested in Mageia Linux-8.
+Note: Don't forget to open the iptables ports required for configurations. Made and tested in Mageia Linux-8/9.
 
 Before connecting (configuration selection)  
 ![](https://github.com/AKotov-dev/protonvpn-gui/blob/main/ScreenShots/ScreenShot1.png)
