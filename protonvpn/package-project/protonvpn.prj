@@ -2,7 +2,7 @@
 name=protonvpn
 
 [VERSION]
-version=0.9
+version=1.0
 
 [RELEASE]
 release=0.mrx9
@@ -31,7 +31,7 @@ urlcopy=https://github.com/AKotov-dev/protonvpn-gui
 license=GPLv3+
 
 [DEPS]
-deps=openvpn systemd polkit unzip iproute2 fping
+deps=openvpn systemd polkit unzip fping resolvconf procps-ng
 
 [META]
 meta=0
@@ -70,36 +70,40 @@ devtool=Lazarus
 toolversion=2.2.0
 
 [INFO]
-0=v0.9
-1=+ releasing the vpn interface in case of connection failures
-2=
-3=v0.8
-4=+ using fping to check the connection
-5=+ indication of any active tun[x] interface
-6=+ compatibility with configurations from other sources
-7=
-8=v0.7
-9=+ clearing the cache and cookies of browsers before launching
-10=+ changing the prefix of rpm packages to mrx9
+0=v1.0
+1=+ DNS Leak protection
+2=+ Release for Mageia-9 and higher
+3=
+4=v0.9
+5=+ releasing the vpn interface in case of connection failures
+6=
+7=v0.8
+8=+ using fping to check the connection
+9=+ indication of any active tun[x] interface
+10=+ compatibility with configurations from other sources
 11=
-12=v0.6
-13=+ iproute2 support
-14=+ Plasma scaling support
-15=+ redesigned vpn connection verification
-16=
-17=Proton VPN Connector for FREE configurations
-18=---
-19=/etc/protonvpn - рабочая папка
-20=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
-21=/etc/protonvpn/protonvpn.pass - файл с паролями
-22=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
-23=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
-24=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
-25=/usr/bin/protonvpn - пускач через pkexec
-26=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
-27=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
-28=/usr/share/protonvpn - GUI (Lazarus source + bin)
-29=/usr/share/icons/protonvpn.png - иконка в основном меню
-30=/usr/share/doc/protonvpn/repack.txt - инфо
-31=/run/openvpn/protonvpn.pid - индикатор процесса
-32=/var/log/protonvpn.log - лог подключения
+12=v0.7
+13=+ clearing the cache and cookies of browsers before launching
+14=+ changing the prefix of rpm packages to mrx9
+15=
+16=v0.6
+17=+ iproute2 support
+18=+ Plasma scaling support
+19=+ redesigned vpn connection verification
+20=
+21=Proton VPN Connector for FREE configurations
+22=---
+23=/etc/protonvpn - рабочая папка
+24=/etc/protonvpn/*.ovpn - файлы конфигураций из скаченного ProtonVPN_server_configs.zip
+25=/etc/protonvpn/protonvpn.pass - файл с паролями
+26=/etc/protonvpn/update-resolv-conf - скрипт подстановки DNS из VPN в /etc/resolv.conf
+27=/etc/protonvpn/protonvpn.xml - файл конфигурации GUI
+28=/etc/systemd/system/protonvpn.service - сервис запуска через systemd
+29=/usr/bin/protonvpn - пускач через pkexec
+30=/usr/share/applications/protonvpn.desktop - ярлык запуска основного меню
+31=/usr/share/polkit-1/actions/protonvpn.policy - политика запуска через pkexec
+32=/usr/share/protonvpn - GUI (Lazarus source + bin)
+33=/usr/share/icons/protonvpn.png - иконка в основном меню
+34=/usr/share/doc/protonvpn/repack.txt - инфо
+35=/run/openvpn/protonvpn.pid - индикатор процесса
+36=/var/log/protonvpn.log - лог подключения
