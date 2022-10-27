@@ -10,14 +10,6 @@ msgctxt "tconfigform.caption"
 msgid "Configuration"
 msgstr ""
 
-#: tconfigform.checkbox1.caption
-msgid "+ resolvconf"
-msgstr ""
-
-#: tconfigform.checkbox1.hint
-msgid "Use DNS from VPN"
-msgstr ""
-
 #: tconfigform.label1.caption
 msgid "Login:"
 msgstr ""
@@ -64,5 +56,9 @@ msgstr ""
 
 #: tmainform.stopbtn.caption
 msgid "Stop"
+msgstr ""
+
+#: unit1.snovpnconfig
+msgid "The archive does not contain the *.ovpn configurations!"
 msgstr ""
 

@@ -4,7 +4,5 @@
 {"hash":179191546,"name":"tconfigform.label2.caption","sourcebytes":[80,97,115,115,119,111,114,100,58],"value":"Password:"},
 {"hash":258097696,"name":"tconfigform.loadbtn.hint","sourcebytes":[76,111,97,100,32,80,114,111,116,111,110,86,80,78,95,115,101,114,118,101,114,95,99,111,110,102,105,103,115,46,122,105,112],"value":"Load ProtonVPN_server_configs.zip"},
 {"hash":341364,"name":"tconfigform.loadbtn.caption","sourcebytes":[76,111,97,100],"value":"Load"},
-{"hash":147499204,"name":"tconfigform.restartbtn.caption","sourcebytes":[82,101,115,116,97,114,116],"value":"Restart"},
-{"hash":231326958,"name":"tconfigform.checkbox1.hint","sourcebytes":[85,115,101,32,68,78,83,32,102,114,111,109,32,86,80,78],"value":"Use DNS from VPN"},
-{"hash":149629670,"name":"tconfigform.checkbox1.caption","sourcebytes":[43,32,114,101,115,111,108,118,99,111,110,102],"value":"+ resolvconf"}
+{"hash":147499204,"name":"tconfigform.restartbtn.caption","sourcebytes":[82,101,115,116,97,114,116],"value":"Restart"}
 ]}

@@ -15,7 +15,6 @@ type
   TConfigForm = class(TForm)
     LoadBtn: TButton;
     RestartBtn: TButton;
-    CheckBox1: TCheckBox;
     Edit1: TEdit;
     Edit2: TEdit;
     FileListBox1: TFileListBox;
@@ -83,6 +82,9 @@ procedure TConfigForm.RestartBtnClick(Sender: TObject);
 var
   S: TStringList;
 begin
+  //Если список пуст - выйти
+  if FileListBox1.Count = 0 then Exit;
+
   MainForm.Shape1.Brush.Color := clYellow;
   MainForm.Shape1.Repaint;
 
@@ -107,13 +109,11 @@ begin
     S.Add('Type=forking');
     S.Add('PIDFile=/run/openvpn/protonvpn.pid');
     S.Add('ExecStart=/usr/sbin/openvpn --daemon --writepid /run/openvpn/protonvpn.pid \');
-    S.Add('--config ' + FileListBox1.FileName + ' --log /var/log/protonvpn.log \');
+    S.Add('--config "' + FileListBox1.FileName + '" --log /var/log/protonvpn.log \');
 
-    if CheckBox1.Checked then
-    begin
-      S.Add('--script-security 2 --up /etc/protonvpn/update-resolv-conf \');
-      S.Add('--down /etc/protonvpn/update-resolv-conf \');
-    end;
+    S.Add('--script-security 2 --up /etc/protonvpn/update-resolv-conf \');
+    S.Add('--down /etc/protonvpn/update-resolv-conf \');
+
     //--ping-restart 10?
     S.Add('--mute-replay-warnings --auth-user-pass /etc/protonvpn/protonvpn.pass');
     S.Add('');
@@ -126,13 +126,11 @@ begin
 
     //Попутно удаляем коннект на 80-тый порт из конфига (иногда не подключается на FREE и ставим #persist-tun)
     Mainform.StartProcess(
-      'chmod 600 /etc/protonvpn/protonvpn.pass; sed -i "/remote.*80/ d" ' +
-      ConfigForm.FileListBox1.FileName + '; sed -i ' + '''' +
-      's/^persist-tun*/#persist-tun/' + '''' + ' ' + ConfigForm.FileListBox1.FileName +
-      '; systemctl daemon-reload; systemctl stop protonvpn.service; ' +
+      'chmod 600 /etc/protonvpn/protonvpn.pass; sed -i "/remote.*80/ d" "' +
+      ConfigForm.FileListBox1.FileName + '"; sed -i ' + '''' +
+      's/^persist-tun*/#persist-tun/' + '''' + ' "' + ConfigForm.FileListBox1.FileName +
+      '"; systemctl daemon-reload; systemctl stop protonvpn.service; ' +
       'systemctl restart protonvpn.service');
-
-    //MainForm.AutoStartCheckBox.Enabled := True;
 
     ConfigForm.Close;
   end;
@@ -150,30 +148,39 @@ begin
   XMLPropStorage1.Save;
 end;
 
-//Загрузка ключей из архива ZIP
+//Загрузка конфигураций *.ovpn из архива *.zip
 procedure TConfigForm.LoadBtnClick(Sender: TObject);
 var
   S: ansistring;
 begin
-  if OpenDialog1.Execute then
-  begin
-    //Удаление старых *.ovpn
-    RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*.ovpn'], S);
+  try
+    if OpenDialog1.Execute then
+    begin
+      //Просмотр архива на предмет конфигураций *.ovpn
+      RunCommand('/bin/bash', ['-c', 'unzip -l "' + OpenDialog1.FileName +
+        '" | grep ".ovpn"'], S);
+      //Выход, если в *.zip отсутствуют конфигурации *.ovpn
+      if Trim(S) = '' then
+      begin
+        MessageDlg(SNoVPNConfig, mtWarning, [mbOK], 0);
+        Exit;
+      end;
 
-    //zip или не zip
-    //if Copy(OpenDialog1.FileName, Length(OpenDialog1.FileName) - 3, 4) = '.zip' then
-    RunCommand('/bin/bash', ['-c', 'unzip -o "' + OpenDialog1.FileName +
-      '" -d /etc/protonvpn/'], S);
-   { else
-      RunCommand('/bin/bash', ['-c', 'cp -f "' + OpenDialog1.FileName +
-        '" /etc/protonvpn/'], s); }
+      //Удаление старых *.ovpn
+      if RunCommand('/bin/bash', ['-c', 'rm -f /etc/protonvpn/*.ovpn'], S) then
+        //Распаковка без учета структуры архива
+        if RunCommand('/bin/bash', ['-c', 'unzip -j -o "' +
+          OpenDialog1.FileName + '" -d /etc/protonvpn/'], S) then
+          FileListBox1.UpdateFileList;
 
-    FileListBox1.UpdateFileList;
+      FileListBox1.ItemIndex := 0;
+      FileLIstBox1.Click;
 
-    FileListBox1.ItemIndex := 0;
-    FileLIstBox1.Click;
-
-    RestartBtn.Enabled := True;
+      RestartBtn.Enabled := True;
+    end;
+  except
+    //Возврат индекса, позиция не выбрана
+    XMLPropStorage1.WriteInteger('findex', -1);
   end;
 end;
 

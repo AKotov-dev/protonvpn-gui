@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 315
+  Left = 306
   Height = 684
-  Top = 122
+  Top = 126
   Width = 937
   ActiveControl = ConfigBtn
   Caption = 'ProtonVPN-GUI'
@@ -16,8 +16,8 @@ object MainForm: TMainForm
     AnchorSideTop.Control = ConfigBtn
     AnchorSideTop.Side = asrBottom
     Left = 0
-    Height = 614
-    Top = 50
+    Height = 611
+    Top = 53
     Width = 937
     Align = alBottom
     Anchors = [akTop, akLeft, akRight, akBottom]
@@ -34,7 +34,7 @@ object MainForm: TMainForm
   end
   object ConfigBtn: TButton
     Left = 8
-    Height = 32
+    Height = 35
     Top = 8
     Width = 128
     Caption = 'Configuration'
@@ -45,9 +45,9 @@ object MainForm: TMainForm
     AnchorSideTop.Control = StopBtn
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = StopBtn
-    Left = 743
+    Left = 738
     Height = 32
-    Top = 8
+    Top = 9
     Width = 91
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
@@ -62,7 +62,7 @@ object MainForm: TMainForm
     AnchorSideTop.Side = asrCenter
     Left = 146
     Height = 12
-    Top = 18
+    Top = 19
     Width = 12
     BorderSpacing.Left = 10
     Brush.Color = clYellow
@@ -71,10 +71,10 @@ object MainForm: TMainForm
   object StopBtn: TButton
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
-    Left = 839
-    Height = 32
+    Left = 834
+    Height = 35
     Top = 8
-    Width = 90
+    Width = 95
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 8
     Caption = 'Stop'
@@ -100,24 +100,15 @@ object MainForm: TMainForm
     AnchorSideTop.Control = AutoStartCheckBox
     AnchorSideTop.Side = asrCenter
     AnchorSideRight.Control = AutoStartCheckBox
-    Left = 349
+    Left = 344
     Height = 32
-    Top = 8
+    Top = 9
     Width = 389
     Anchors = [akTop, akRight]
     BorderSpacing.Right = 5
     Caption = 'Сlearing the cache and cookies at GUI startup (Mageia only)'
     OnChange = ClearBoxChange
     TabOrder = 5
-  end
-  object Button1: TButton
-    Left = 184
-    Height = 25
-    Top = 10
-    Width = 75
-    Caption = 'Button1'
-    OnClick = Button1Click
-    TabOrder = 6
   end
   object Timer1: TTimer
     OnTimer = Timer1Timer

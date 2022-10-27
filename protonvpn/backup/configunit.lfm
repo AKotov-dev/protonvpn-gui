@@ -1,7 +1,7 @@
 object ConfigForm: TConfigForm
-  Left = 464
+  Left = 315
   Height = 511
-  Top = 174
+  Top = 128
   Width = 492
   ActiveControl = FileListBox1
   Caption = 'Configuration'
@@ -22,8 +22,8 @@ object ConfigForm: TConfigForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 5
-    Height = 419
-    Top = 87
+    Height = 417
+    Top = 89
     Width = 346
     Anchors = [akTop, akLeft, akRight, akBottom]
     BorderSpacing.Left = 5
@@ -31,13 +31,14 @@ object ConfigForm: TConfigForm
     BorderSpacing.Right = 5
     BorderSpacing.Bottom = 5
     Directory = '/etc/protonvpn'
-    ItemHeight = 25
+    ItemHeight = 0
     Mask = '*.ovpn'
     MultiSelect = True
     OnChange = FileListBox1Click
     OnClick = FileListBox1Click
     OnDblClick = RestartBtnClick
     TabOrder = 2
+    TopIndex = -1
   end
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
@@ -53,7 +54,7 @@ object ConfigForm: TConfigForm
     AnchorSideTop.Side = asrCenter
     Left = 5
     Height = 17
-    Top = 56
+    Top = 57
     Width = 61
     BorderSpacing.Right = 4
     Caption = 'Password:'
@@ -64,7 +65,7 @@ object ConfigForm: TConfigForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 47
-    Height = 36
+    Height = 37
     Top = 8
     Width = 440
     Anchors = [akTop, akLeft, akRight]
@@ -80,8 +81,8 @@ object ConfigForm: TConfigForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 71
-    Height = 36
-    Top = 46
+    Height = 37
+    Top = 47
     Width = 416
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 5
@@ -98,9 +99,9 @@ object ConfigForm: TConfigForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 356
-    Height = 32
+    Height = 35
     Hint = 'Load ProtonVPN_server_configs.zip'
-    Top = 87
+    Top = 89
     Width = 131
     Anchors = [akTop, akRight]
     BorderSpacing.Left = 5
@@ -119,8 +120,8 @@ object ConfigForm: TConfigForm
     AnchorSideBottom.Control = Owner
     AnchorSideBottom.Side = asrBottom
     Left = 356
-    Height = 32
-    Top = 474
+    Height = 35
+    Top = 471
     Width = 131
     Anchors = [akRight, akBottom]
     BorderSpacing.Left = 5
@@ -128,18 +129,17 @@ object ConfigForm: TConfigForm
     BorderSpacing.Bottom = 5
     Caption = 'Restart'
     OnClick = RestartBtnClick
-    TabOrder = 5
+    TabOrder = 4
   end
   object Image1: TImage
     AnchorSideLeft.Control = LoadBtn
     AnchorSideLeft.Side = asrCenter
-    AnchorSideTop.Control = CheckBox1
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 357
     Height = 128
-    Top = 164
+    Top = 141
     Width = 128
     AutoSize = True
     BorderSpacing.Left = 5
@@ -470,21 +470,6 @@ object ConfigForm: TConfigForm
       6734766C4437742F323433362F736369656E63655F61746F6D5F69636F6E5F31
       34373434352E706E6729BD22440000000049454E44AE426082
     }
-  end
-  object CheckBox1: TCheckBox
-    AnchorSideLeft.Control = LoadBtn
-    AnchorSideTop.Control = LoadBtn
-    AnchorSideTop.Side = asrBottom
-    Left = 356
-    Height = 32
-    Hint = 'Use DNS from VPN'
-    Top = 127
-    Width = 108
-    BorderSpacing.Top = 8
-    Caption = '+ resolvconf'
-    ParentShowHint = False
-    ShowHint = True
-    TabOrder = 4
   end
   object XMLPropStorage1: TXMLPropStorage
     StoredValues = <    

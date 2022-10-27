@@ -36,6 +36,9 @@ type
 
   end;
 
+resourcestring
+  SNoVPNConfig = 'The archive does not contain the *.ovpn configurations!';
+
 var
   MainForm: TMainForm;
 
@@ -116,6 +119,7 @@ var
   S: ansistring;
 begin
   Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
   if AutoStartCheckBox.Checked then
     RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], S)
   else

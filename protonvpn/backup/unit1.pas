@@ -14,7 +14,6 @@ type
 
   TMainForm = class(TForm)
     AutoStartCheckBox: TCheckBox;
-    Button1: TButton;
     ClearBox: TCheckBox;
     StopBtn: TButton;
     Shape1: TShape;
@@ -24,7 +23,6 @@ type
     Timer1: TTimer;
     XMLPropStorage1: TXMLPropStorage;
     procedure AutoStartCheckBoxChange(Sender: TObject);
-    procedure Button1Click(Sender: TObject);
     procedure ClearBoxChange(Sender: TObject);
     procedure StopBtnClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -37,6 +35,9 @@ type
   public
 
   end;
+
+resourcestring
+  SNoVPNConfig = 'The archive does not contain the *.ovpn configurations!';
 
 var
   MainForm: TMainForm;
@@ -117,6 +118,7 @@ procedure TMainForm.AutoStartCheckBoxChange(Sender: TObject);
 var
   S: ansistring;
 begin
+  Application.ProcessMessages;
   Screen.Cursor := crHourGlass;
   if AutoStartCheckBox.Checked then
     RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], S)
@@ -125,15 +127,6 @@ begin
 
   AutoStartCheckBox.Checked := CheckAutoStart;
   Screen.Cursor := crDefault;
-end;
-
-procedure TMainForm.Button1Click(Sender: TObject);
-begin
-  showmessage('chmod 600 /etc/protonvpn/protonvpn.pass; sed -i "/remote.*80/ d" ' +
-      ConfigForm.FileListBox1.FileName + '; sed -i ' + '''' +
-      's/^persist-tun*/#persist-tun/' + '''' + ConfigForm.FileListBox1.FileName +
-      '; systemctl daemon-reload; systemctl stop protonvpn.service; ' +
-      'systemctl restart protonvpn.service')
 end;
 
 //Чекбокс очистки кешей и кукисов установленных браузеров
