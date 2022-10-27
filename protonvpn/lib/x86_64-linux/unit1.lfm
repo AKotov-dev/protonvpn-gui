@@ -24,9 +24,6 @@ object MainForm: TMainForm
     BorderSpacing.Top = 10
     Font.Height = -12
     Font.Name = 'Sans'
-    Lines.Strings = (
-      'Рrepare...'
-    )
     ParentFont = False
     ReadOnly = True
     ScrollBars = ssVertical
