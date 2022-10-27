@@ -1,7 +1,7 @@
 object ConfigForm: TConfigForm
-  Left = 315
+  Left = 503
   Height = 511
-  Top = 128
+  Top = 149
   Width = 492
   ActiveControl = FileListBox1
   Caption = 'Configuration'
@@ -31,14 +31,13 @@ object ConfigForm: TConfigForm
     BorderSpacing.Right = 5
     BorderSpacing.Bottom = 5
     Directory = '/etc/protonvpn'
-    ItemHeight = 0
+    ItemHeight = 25
     Mask = '*.ovpn'
     MultiSelect = True
     OnChange = FileListBox1Click
     OnClick = FileListBox1Click
     OnDblClick = RestartBtnClick
     TabOrder = 2
-    TopIndex = -1
   end
   object Label1: TLabel
     AnchorSideTop.Control = Edit1

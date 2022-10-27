@@ -96,21 +96,22 @@ procedure TMainForm.Timer1Timer(Sender: TObject);
 var
   LOG: TStringList;
 begin
-  LOG := TStringList.Create;
-  if FileExists('/var/log/protonvpn.log') then
-  begin
-    LOG.LoadFromFile('/var/log/protonvpn.log');
-    if LOG.Text <> Memo1.Lines.Text then
+  try
+    LOG := TStringList.Create;
+    if FileExists('/var/log/protonvpn.log') then
     begin
-      Memo1.Lines.Assign(LOG);
-      //Промотать список вниз
-      Memo1.SelStart := Length(Memo1.Text);
-      Memo1.SelLength := 0;
+      LOG.LoadFromFile('/var/log/protonvpn.log');
+      if LOG.Text <> Memo1.Lines.Text then
+      begin
+        Memo1.Lines.Assign(LOG);
+        //Промотать список вниз
+        Memo1.SelStart := Length(Memo1.Text);
+        Memo1.SelLength := 0;
+      end;
     end;
-  end
-  else
-    Memo1.Text := 'The logfile not found: /var/log/protonvpn.log';
-  LOG.Free;
+  finally
+    LOG.Free;
+  end;
 end;
 
 //Чекбокс автостарта

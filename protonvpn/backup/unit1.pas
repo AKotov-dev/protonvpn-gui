@@ -118,8 +118,8 @@ procedure TMainForm.AutoStartCheckBoxChange(Sender: TObject);
 var
   S: ansistring;
 begin
-  Application.ProcessMessages;
   Screen.Cursor := crHourGlass;
+  Application.ProcessMessages;
   if AutoStartCheckBox.Checked then
     RunCommand('/bin/bash', ['-c', 'systemctl enable protonvpn'], S)
   else
