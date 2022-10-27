@@ -1,4 +1,4 @@
-ProtonVPN-GUI - client for ProtonVPN
+ProtonVPN-GUI - client for ProtonVPN, ZoogVPN and similar
 --
 **Dependencies:** openvpn systemd polkit unzip fping resolvconf procps-ng gtk2
 
