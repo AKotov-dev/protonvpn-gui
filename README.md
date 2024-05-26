@@ -1,4 +1,4 @@
-**Announcement:** `ProtonVPN` has discontinued the release of `ProtonVPN_server_configs.zip` that previously contained all possible `*.ovpn` configurations. They do not respond to a request to technical support. To work with ProtonVPN configurations, it is recommended to switch to [OpenVPN-GUI](https://github.com/AKotov-dev/OpenVPN-GUI ). `ZoogVPN` continues to support the release of configurations as a single `zip` archive.
+**Announcement:** `ProtonVPN` has discontinued the release of `ProtonVPN_server_configs.zip` that previously contained all possible `*.ovpn` configurations. They do not respond to a request to technical support. `ZoogVPN` continues to support the release of configurations as a single `zip` archive.
 
 ProtonVPN-GUI - client for ZoogVPN and similar
 --
